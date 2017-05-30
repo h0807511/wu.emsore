@@ -1,12 +1,20 @@
 ---
 title: "R Auswertung"
 author: "Gruppe 2"
-date: "28.5.2017"
 output: pdf_document
 ---
 
+\begin{center}
+\textit{Datum: `r format(Sys.Date(), "%d. %B %Y")`}
+\bigskip
+\end{center}
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+# Counter für Abbildungen und Tabellen
+c_tables <- 0
+c_plots <- 0
 ```
 
 \maketitle
@@ -48,7 +56,7 @@ worum es geht...
 +-------+----------------------------------------------------+--------------------+
 
 \begin{center}
-\textit{Tabelle 1: Übersicht der Hypothesen}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Übersicht der Hypothesen}
 \bigskip
 \end{center}
 
@@ -84,11 +92,16 @@ In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statist
 # Einlesen der Daten
 fragebogen <- read.csv("./fragebogen_old.csv")
 #fragebogen_wo_head <- setNames(fragebogen, *)
+#str(fragebogen)
 # Ausgabe der ersten 5 Zeilen
 library(knitr)
-kable(fragebogen[1:5, ], caption = "A knitr kable.")
+kable(fragebogen[1:5,])
 ```
 
+\begin{center}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Ein Auszug der Daten}
+\bigskip
+\end{center}
 
 ## Übersicht NA
 
@@ -98,7 +111,7 @@ kable(na_count, format="latex", digits=2, longtable=TRUE)
 ```
 
 \begin{center}
-\textit{Tabelle 2: Übersicht der NA im Datensatz}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Übersicht der NA im Datensatz}
 \bigskip
 \end{center}
 
@@ -123,7 +136,7 @@ box(which="figure", lty="solid", col="black")
 ```
 
 \begin{center}
-\textit{Abbildung 2.1: Frage nach Geschlecht}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Frage nach Geschlecht}
 \bigskip
 \end{center}
 
@@ -138,6 +151,10 @@ In Abbildung 2.1 ist die Verteilung der Befragten nach ihrem Geschlecht dargeste
 
 
 Chi-Quadrat Test hierher
+
+```{r }
+chisq.test(na.omit(fragebogen$sex))
+```
 
 
 ## Die abhängige Variable
