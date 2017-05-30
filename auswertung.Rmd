@@ -83,6 +83,7 @@ In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statist
 ```{r Daten einlesen}
 # Einlesen der Daten
 fragebogen <- read.csv("./fragebogen_old.csv")
+#fragebogen_wo_head <- setNames(fragebogen, *)
 # Ausgabe der ersten 5 Zeilen
 library(knitr)
 kable(fragebogen[1:5, ], caption = "A knitr kable.")
@@ -92,8 +93,8 @@ kable(fragebogen[1:5, ], caption = "A knitr kable.")
 ## Übersicht NA
 
 ```{r Übersicht NA: Liste}
-na_count <- sapply(fragebogen, function(y) sum(is.na(y)))
-kable(na_count, format = "latex", digits = 2, longtable = TRUE)
+na_count <- sapply(fragebogen[-1,], function(y) sum(is.na(y)))
+kable(na_count, format="latex", digits=2, longtable=TRUE)
 ```
 
 \begin{center}
@@ -129,11 +130,11 @@ box(which="figure", lty="solid", col="black")
 
 In Abbildung 2.1 ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen 57 männliche Studierende und 39 weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stich- probe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2013/14 insgesamt 21.157 Personen an der WU studiert haben.13 11.137 davon sind männliche und 10.020 sind weibliche Studieren- de. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2014/15 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Stu- dierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Ver- teilung der Grundgesamtheit unter- scheidet. Die beobachteten und er- warteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
 
-+----------------------------------+-----------------------------------------------------------------------------------------+
-| **Nullhypothese H~0~**           | Die Verteilung der Geschlechter unterscheidet sich *nicht* von der erwarteten Verteilung  |
-+----------------------------------+-----------------------------------------------------------------------------------------+
-| **Alternativhypothese H~A~**     | Die Verteilung der Geschlechter unterscheidet sich von der erwarteten Verteilung        |
-+----------------------------------+-----------------------------------------------------------------------------------------+
++-----------+-------------------------------------------------------------------------------------------+
+| H~0~:     | Die Verteilung der Geschlechter unterscheidet sich *nicht* von der erwarteten Verteilung  |
++-----------+-------------------------------------------------------------------------------------------+
+| H~A~:     | Die Verteilung der Geschlechter unterscheidet sich von der erwarteten Verteilung          |
++-----------+-------------------------------------------------------------------------------------------+
 
 
 Chi-Quadrat Test hierher
@@ -143,7 +144,43 @@ Chi-Quadrat Test hierher
 
 Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde und lautet: "Ausmaß der Fremdenfeindlichkeit". Zur Messung der AV wurde den Studierenden eine Likertskala mit 10 Items vorgelegt. Die Antwortmöglichkeiten waren auf einer 6-stufigen Intervallskala mit den Ausprägungen "Stimme sehr zu" bis "Stimme gar nicht zu" vorgegeben. Die Frage lautete "Wie ist deine Meinung zur Migration?" (siehe im Anhang Frage 6 im Fragebogen). 
 
+```{r Hauptkomponentenanalyse: AV}
+library("psych")
+av <- na.omit(fragebogen[,35:44])
+library("REdaS")
+bart_spher(av)
+kmosmd <- KMOS(av)
+print(kmosmd, stats="KMO")
+print(kmosmd, stats="MSA", sort=TRUE, digits=3, show=1:5)
+VSS.scree(av)
+box(which="figure", lty="solid", col="black")
+pca.av <- principal(av, 5, rotate="none")
+pca.av
+pca.av_r <- principal(av,5)
+print(pca.av_r, cut=0.5, sort=TRUE, digits=2)
+fa.diagram(pca.av_r, cut=0.5, cex=0.8, rsize=0.5, main="")
+box(which="figure", lty="solid", col="black")
+pca.av2 <- principal(av,2)
+print(pca.av2, cut=0.5, sort=TRUE, digits=2)
+```
 
+
+
+## Hypothese 1
+
+## Hypothese 2
+
+## Hypothese 3
+
+## Hypothese 4
+
+## Hypothese 5
+
+## Hypothese 6
+
+
+
+\section{Anhang}
 
 \appendix
 Was so alles in den Anhang kommt
