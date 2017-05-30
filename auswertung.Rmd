@@ -90,7 +90,7 @@ In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statist
 
 ```{r Daten einlesen}
 # Einlesen der Daten
-fragebogen <- read.csv("./fragebogen_old.csv")
+fragebogen <- read.csv("./fragebogen.csv")
 ```
 
 
