@@ -1,11 +1,23 @@
 ---
+output: 
+  pdf_document:
+    citation_package: natbib
+    #keep_tex: true
+    #fig_caption: true
+    #number_sections: true
+    #toc: true
+    latex_engine: pdflatex
+    #template: latex_template.tex
 title: "R Auswertung"
-author: "Gruppe 2"
-output: pdf_document
+author: Boris T. Podzeit, Yasir Khan
+keywords: "pandoc, r markdown, knitr"
+#bibliography: literatur.bib
+#biblio-style: apsr
+endnote: no
 ---
 
 \begin{center}
-\textit{Datum: `r format(Sys.Date(), "%d. %B %Y")`}
+\textit{`r format(Sys.Date(), "%d. %B %Y")`}
 \bigskip
 \end{center}
 
@@ -23,9 +35,10 @@ c_plots <- 0
 \tableofcontents
 
 \begin{abstract}
-worum es geht... 
+Abstract hierher ...
 \end{abstract}
- 
+
+
 \section{Forschungsdesign und Methode}
 
 ## Hypothesen
@@ -207,4 +220,13 @@ print(pca.av2, cut=0.5, sort=TRUE, digits=2)
 
 \appendix
 Was so alles in den Anhang kommt
+
+<!--
+# References
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
+-->
 
