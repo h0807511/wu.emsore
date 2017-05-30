@@ -91,11 +91,17 @@ In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statist
 ```{r Daten einlesen}
 # Einlesen der Daten
 fragebogen <- read.csv("./fragebogen_old.csv")
-#fragebogen_wo_head <- setNames(fragebogen, *)
-#str(fragebogen)
-# Ausgabe der ersten 5 Zeilen
+```
+
+
+Ausgabe der ersten 5 Zeilen: 
+
+``` {r Daten Ausgabe, echo=FALSE }
 library(knitr)
-kable(fragebogen[1:5,])
+kable(fragebogen[1:5,1:12])
+kable(fragebogen[1:5,13:24])
+kable(fragebogen[1:5,25:36])
+kable(fragebogen[1:5,37:46])
 ```
 
 \begin{center}
