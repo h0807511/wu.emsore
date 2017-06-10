@@ -150,7 +150,7 @@ sex_count <- table(fragebogen$sex)
 # Zuweisen von lesbaren Labels zu den Werten der Spalte
 rownames(sex_count) <- c("männlich", "weiblich")
 # Balkendiagramm erzeugen
-barplot(sex_count, main="Geschlecht", ylim=c(0,30), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col = c("lightblue", "mistyrose"))
+barplot(sex_count, main="Geschlecht", ylim=c(0,80), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col = c("lightblue", "mistyrose"))
 box(which="figure", lty="solid", col="black")
 ```
 
