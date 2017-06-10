@@ -8,19 +8,13 @@ output:
     #toc: true
     latex_engine: pdflatex
     #template: latex_template.tex
-title: "R Auswertung"
+title: "Zur Wahrnehmung und Einstellung von WU-Studierenden gegenüber Fremden"
 author: Boris T. Podzeit, Yasir Khan
 keywords: "pandoc, r markdown, knitr"
 #bibliography: literatur.bib
 #biblio-style: apsr
 endnote: no
 ---
-
-\begin{center}
-\textit{`r format(Sys.Date(), "%d. %B %Y")`}
-\bigskip
-\end{center}
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -29,7 +23,17 @@ c_tables <- 0
 c_plots <- 0
 ```
 
-\maketitle
+\begin{center}
+\vspace{5mm}
+Forschungsarbeit für die Kurse\\
+Methoden der empirischen Sozialforschung I und II \par
+\vspace{5mm}
+Wirtschaftsuniversität Wien,\\
+Sommersemester 2017
+\vfill
+\textit {Letztes Update: `r format(Sys.Date(), "%d. %B %Y")`}
+\end{center}
+\clearpage
 
 \renewcommand*\contentsname{Inhaltsverzeichnis}
 \tableofcontents
@@ -103,7 +107,7 @@ In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statist
 
 ```{r Daten einlesen}
 # Einlesen der Daten
-fragebogen <- read.csv("./fragebogen.csv")
+fragebogen <- read.csv("./data.csv")
 ```
 
 
