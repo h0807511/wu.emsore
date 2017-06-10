@@ -4,15 +4,15 @@ output:
     citation_package: natbib
     #keep_tex: true
     #fig_caption: true
-    #number_sections: true
+    number_sections: true
     #toc: true
     latex_engine: pdflatex
-    #template: latex_template.tex
+    template: latex_template.tex
 title: "Zur Wahrnehmung und Einstellung von WU-Studierenden gegenüber Fremden"
 author: Boris T. Podzeit, Yasir Khan
 keywords: "pandoc, r markdown, knitr"
-#bibliography: literatur.bib
-#biblio-style: apsr
+bibliography: literatur.bib
+biblio-style: apsr
 endnote: no
 ---
 
@@ -35,12 +35,13 @@ Sommersemester 2017
 \end{center}
 \clearpage
 
+\begin{abstract}
+Im vorliegenden Paper wird überprüft, ob die Ausprägung von Fremdenfeindlichkeit bei WU StudentInnen mit dem persönlichen und universitären Umfeld, mit dem Konsum bestimmter Medien und persönlichen Merkmalen (Geschlecht) in Zusammenhang steht. Die Daten wurden mittels schriftlichem Fragebogen bei +100 Studenten der WU Wien erhoben. Es konnte gezeigt werden daß, bla bla männliche Studenten ein signifikant höheres Maß an ausländerfeindlicher Einstellung aufweisen als weibliche Studenten. Die Befragten, die freundschaftlichen Kontakt zu Personen mit Migrationshintergrund pflegen, wiesen unabhängig vom Geschlecht ein signifikant geringeres Maß an Fremdenfeindlichkeit auf als jene, die keinen Kontakt zu Personen mit Migrationshintergrund hatten. 
+\end{abstract}
+
 \renewcommand*\contentsname{Inhaltsverzeichnis}
 \tableofcontents
-
-\begin{abstract}
-Abstract hierher ...
-\end{abstract}
+\clearpage
 
 
 \section{Forschungsdesign und Methode}
