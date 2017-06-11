@@ -17,7 +17,8 @@ endnote: no
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo=TRUE)
+knitr::opts_chunk$set(cache=TRUE)
 # Counter für Abbildungen und Tabellen
 c_tables <- 0
 c_plots <- 0
@@ -28,7 +29,7 @@ c_plots <- 0
 Forschungsarbeit für die Kurse\\
 Methoden der empirischen Sozialforschung I und II \par
 \vspace{5mm}
-Wirtschaftsuniversität Wien,\\
+Wirtschaftsuniversität Wien\\
 Sommersemester 2017
 \vfill
 \textit {Letztes Update: `r format(Sys.Date(), "%d. %B %Y")`}
@@ -76,7 +77,6 @@ Hierher Text persönliches Umfeld (Stichwort Kontakthypothese), persönliche Mer
 Auch das Bildungsniveau spielt eine Rolle bei der Entstehung von Fremdenfeindlichkeit, denn Bildung gilt als wichtiger Faktor für die Vermittlung von demokratischen Gedanken und Werten. Aber ist Immunität von Höhergebildeten gegenüber menschenfeindlichen Ideologien zwangsläufig gegeben? Aktuelle Wahlanalysen in Deutschland zeigen beispielsweise, dass AfD-Wähler in allen Wählerschichten zu finden sind. Der negative Zusammenhang von Bildung und Fremdenfeindlichkeit gilt offenbar nicht in allen Kontexten (Susanne Rippl, 2016). Höher gebildete haben jedoch meist stärkere kognitive Fähigkeiten; komplexe gesellschaftliche Zusammenhänge werden gedanklich durchdrungen, Vorurteile zur Kompensation sind dann nicht notwendig. Niedrige Bildungsgrade führen hingegen eher zu geringeren Anpassungsgraden. Sozialer Wandel führt in dieser Gruppe zu vermehrten Sicherheitsstreben und der „Beschwörung der Eigengruppe“ (Citation needed). 
 
 ## Hypothesen
-
 +-------+----------------------------------------------------+--------------------+
 | Nr.   | Hypothese                                          | Dimension          |
 +=======+====================================================+====================+
@@ -109,7 +109,7 @@ Auch das Bildungsniveau spielt eine Rolle bei der Entstehung von Fremdenfeindlic
 
 \section{Forschungsdesign und Methode}
 
-Die im Kurs ausgearbeiteten Hypothesen sollen in dieser Arbeit empirisch geprüft werden. Bei der Ausarbeitung der Hypothesen wurde im Vorfeld von allen Beteiligten besonders bei der Abfrage der Fremdenfeindlichkeit mit verschiedenen Zugangsmöglichkeiten  experimentiert. (Beispiele, Thematisieren Absprung Kollege)
+Die im Kurs ausgearbeiteten Hypothesen sollen in dieser Arbeit empirisch geprüft werden. Bei der Ausarbeitung der Hypothesen wurde im Vorfeld von allen Beteiligten besonders bei der Abfrage der Fremdenfeindlichkeit mit verschiedenen Zugangsmöglichkeiten experimentiert. (Beispiele, Thematisieren Absprung Kollege)
 
 ## Befragung
 
@@ -119,68 +119,46 @@ Es wurde ein einmaliger Pretest mit 3 Personen durchgeführt um Feedback zur Qua
 
 ## Fragebogen
 
-In ausgedruckter Form besteht der Fragebogen aus 4 A4-Seiten und umfasst 7 Fragen die großteils mit Hilfe von Item-Batterien in Form von Likert-Skalen erhoben wurden. Die der Likert-Skala zugrunde liegenden Intervallskala waren sechsstufig. Die Antwortmöglichkeiten waren die beiden Extrempole "Trifft sehr zu"" (1) und "Trifft gar nicht zu" (6) mit  dazwischenliegenden Werte die mit Zahlen (2,3,4,5) ohne Beschriftung angegeben worden sind um einerseits den Fragebogen optisch nicht zu überladen und andererseits subjektiv wahrgenommene Unterschiede bei Abstufungen in Textform zu vermeiden. 
+In ausgedruckter Form besteht der Fragebogen aus 4 A4-Seiten und umfasst 7 Fragen die großteils mit Hilfe von Item-Batterien in Form von Likert-Skalen erhoben wurden. Die der Likert-Skala zugrunde liegenden Intervallskala waren sechsstufig. Die Antwortmöglichkeiten waren die beiden Extrempole "Trifft sehr zu"" (1) und "Trifft gar nicht zu" (6) mit  dazwischenliegenden Werte die mit Zahlen (2,3,4,5) ohne Beschriftung angegeben worden sind um einerseits den Fragebogen optisch nicht zu überladen und andererseits subjektiv wahrgenommene Unterschiede bei Abstufungen in Textform zu vermeiden.
+
+## Variablen
+
+Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde, diese lautet: "Ausmaß der Fremdenfeindlichkeit". Es wird der Einfluss verschiedener Faktoren auf die Stärke der Fremdenfeindlichkeit untersucht. Aus diesem Grund wird dieselbe AV in der Untersuchung aller Hypothesen zur Verwendung kommen. Die unabhängigen Variablen (UV) sind passend zur Fragestellung für jede Hypothese unterschiedlich gewählt.
+
+
+\section{Der Datensatz}
 
 ## Kodierung
 
 Beschreibung der Kodierung
 
 
-## Variablen
+## Datenkontrolle 
 
-Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde, diese lautet: "Ausmaß der Fremdenfeindlichkeit". Es wird der Einfluss verschiedener Faktoren auf die Stärke der Fremdenfeindlichkeit untersucht. Aus diesem Grund wird dieselbe AV in der Untersuchung aller Hypothesen zur Verwendung kommen. 
+Da es in der Praxis oft vorkommt dass beim Ausfüllen des Fragebogens nicht alle Fragen beantwortet wurden oder Fehler bei der Übertragung passieren, wird eine Datenkontrolle durchgeführt um ungewöhnliche Fälle aufzuspüren und 'missing values' (NAs) festzustellen. Einen Auszug des gesamten Datensatzes ist im Anhang zu finden. 
 
-Die unabhängigen Variablen (UV) sind für jede Hypothese unterschiedlich gewählt. Im demographischen Teil wurde auf Fragen zu persönlichen Merkmalen bis auf das Geschlecht verzichtet um den Fragebogen möglichst anonym zu halten.
+
+```{r Daten einlesen und summary, echo=FALSE}
+# Einlesen der Daten
+fragebogen <- read.csv("./data.csv")
+#summary(fragebogen)
+```
+
+Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Frage 3, Item 12 des  Fragebogen im Anhang "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala und 3 Ergebnisse mit schriftlichen Angaben kombiniert mit einer Auswahl auf der Skala. Die meisten Antwortmöglichkeiten sind jedoch eine Auswahl auf der Skala ohne irgendeiner schriftlichen Angabe zum Medium. Das führte zur Entscheidung diese Variable gänzlich aus der Auswertung zu entfernen, da eine Angabe auf der Skala ohne zusätzlicher Angabe auf welches Medium sich diese bezieht, wertlos und ohne Aussage ist. 
+
+```{r var andere entfernen}
+fragebogen$andere <- NULL
+summary(fragebogen)
+```
 
 
 \section{Empirie}
 
-In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statistischen Verfahren ausgewertet. Allen statistischen Untersuchungen wird ein Signifikanzniveau von 5% (a=0,05) zugrunde gelegt. 
-
-## Der Datensatz
-
-```{r Daten einlesen}
-# Einlesen der Daten
-fragebogen <- read.csv("./data.csv")
-```
-
-
-Ausgabe der ersten 5 Zeilen: 
-
-``` {r Daten Ausgabe, echo=FALSE }
-library(knitr)
-kable(fragebogen[1:5,1:12])
-kable(fragebogen[1:5,13:24])
-kable(fragebogen[1:5,25:36])
-kable(fragebogen[1:5,37:46])
-```
-
-\begin{center}
-\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Ein Auszug der Daten}
-\bigskip
-\end{center}
-
-## Übersicht NA
-
-```{r Übersicht NA: Liste}
-na_count <- sapply(fragebogen[-1,], function(y) sum(is.na(y)))
-kable(na_count, format="latex", digits=2, longtable=TRUE)
-```
-
-\begin{center}
-\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Übersicht der NA im Datensatz}
-\bigskip
-\end{center}
-
-
-```{r Übersicht NA: Sum}
-# Summe aller NA im Datensatz
-sum(is.na(fragebogen))
-```
-
+In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statistischen Verfahren ausgewertet. Allen statistischen Untersuchungen wird ein Signifikanzniveau von 5% (a=0,05) zugrunde gelegt.
 
 ## Demographische Daten
 
+Im demographischen Teil zum Schluss des Fragebogens wurde auf Fragen zu persönlichen Merkmalen bis auf das Geschlecht verzichtet um den Fragebogen möglichst anonym zu halten. Dieser eher "minimalistische" Ansatz hat sich bei der Auswertung zwar als nicht hinderlich jedoch reduzierten sich die Möglichkeiten um zusätzliche "kostenlose" Auswertungen durchzuführe. Beispielsweise wäre es möglich gewesen die UV mit "Alter" zu analysieren, wobei hier die Repräsentativität zu prüfen gewesen wäre. 
 
 ```{r barplot Geschlecht}
 # Einlesen der Spalte "Sex"
@@ -188,7 +166,7 @@ sex_count <- table(fragebogen$sex)
 # Zuweisen von lesbaren Labels zu den Werten der Spalte
 rownames(sex_count) <- c("männlich", "weiblich")
 # Balkendiagramm erzeugen
-barplot(sex_count, main="Geschlecht", ylim=c(0,80), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col = c("lightblue", "mistyrose"))
+barplot(sex_count, main="Geschlecht", ylim=c(0,80), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("lightblue", "mistyrose"))
 box(which="figure", lty="solid", col="black")
 ```
 
@@ -198,7 +176,7 @@ box(which="figure", lty="solid", col="black")
 \end{center}
 
 
-In Abbildung 2.1 ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen 57 männliche Studierende und 39 weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stich- probe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2013/14 insgesamt 21.157 Personen an der WU studiert haben.13 11.137 davon sind männliche und 10.020 sind weibliche Studieren- de. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2014/15 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Stu- dierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Ver- teilung der Grundgesamtheit unter- scheidet. Die beobachteten und er- warteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
+In Abbildung `r c_plots` ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen 57 männliche Studierende und 39 weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stich- probe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2013/14 insgesamt 21.157 Personen an der WU studiert haben.13 11.137 davon sind männliche und 10.020 sind weibliche Studieren- de. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2014/15 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Stu- dierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Ver- teilung der Grundgesamtheit unter- scheidet. Die beobachteten und er- warteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
 
 +-----------+-------------------------------------------------------------------------------------------+
 | H~0~:     | Die Verteilung der Geschlechter unterscheidet sich *nicht* von der erwarteten Verteilung  |
@@ -209,7 +187,7 @@ In Abbildung 2.1 ist die Verteilung der Befragten nach ihrem Geschlecht dargeste
 
 Chi-Quadrat Test hierher
 
-```{r }
+```{r Chi-Quadrat Test}
 chisq.test(na.omit(fragebogen$sex))
 ```
 
@@ -253,11 +231,46 @@ print(pca.av2, cut=0.5, sort=TRUE, digits=2)
 ## Hypothese 6
 
 
-
+\clearpage
 \section{Anhang}
 
+## Übersicht Datensatz
+
+Ausgabe der ersten 5 Zeilen: 
+
+``` {r Daten Ausgabe, echo=FALSE}
+library(knitr)
+kable(fragebogen[1:5,1:12])
+kable(fragebogen[1:5,13:24])
+kable(fragebogen[1:5,25:36])
+kable(fragebogen[1:5,37:46])
+```
+
+\begin{center}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Ein Auszug der Daten}
+\bigskip
+\end{center}
+
+## Übersicht NA
+
+```{r Übersicht NA: Liste}
+na_count <- sapply(fragebogen[-1,], function(y) sum(is.na(y)))
+kable(na_count, format="latex", digits=2, longtable=TRUE)
+```
+
+\begin{center}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Übersicht der NA im Datensatz}
+\bigskip
+\end{center}
+
+
+```{r Übersicht NA: Sum}
+# Summe aller NA im Datensatz
+sum(is.na(fragebogen))
+```
+
+\section{Referenzen}
 \appendix
-Was so alles in den Anhang kommt
 
 <!--
 # References
