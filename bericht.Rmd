@@ -123,7 +123,7 @@ In ausgedruckter Form besteht der Fragebogen aus 4 A4-Seiten und umfasst 7 Frage
 
 ## Variablen
 
-Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde, diese lautet: "Ausmaß der Fremdenfeindlichkeit". Es wird der Einfluss verschiedener Faktoren auf die Stärke der Fremdenfeindlichkeit untersucht. Aus diesem Grund wird dieselbe AV in der Untersuchung aller Hypothesen zur Verwendung kommen. Die unabhängigen Variablen (UV) sind passend zur Fragestellung für jede Hypothese unterschiedlich gewählt.
+Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde, diese lautet: "Ausmaß der Fremdenfeindlichkeit". Es wird der Einfluss verschiedener Faktoren auf die Stärke der Fremdenfeindlichkeit untersucht. Aus diesem Grund wird dieselbe AV in der Untersuchung aller Hypothesen zur Verwendung kommen. Die unabhängigen Variablen (UV) sind passend zur Fragestellung für jede Hypothese unterschiedlich gewählt. (erklärung welche metrische, kategoriale)
 
 
 \section{Der Datensatz}
@@ -138,23 +138,37 @@ Beschreibung der Kodierung
 Da es in der Praxis oft vorkommt dass beim Ausfüllen des Fragebogens nicht alle Fragen beantwortet wurden oder Fehler bei der Übertragung passieren, wird eine Datenkontrolle durchgeführt um ungewöhnliche Fälle aufzuspüren und 'missing values' (NAs) festzustellen. Einen Auszug des gesamten Datensatzes ist im Anhang zu finden. 
 
 
-```{r Daten einlesen und summary, echo=FALSE}
-# Einlesen der Daten
+```{r Daten einlesen und summary}
 fragebogen <- read.csv("./data.csv")
 #summary(fragebogen)
 ```
 
-Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Frage 3, Item 12 des  Fragebogen im Anhang "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala und 3 Ergebnisse mit schriftlichen Angaben kombiniert mit einer Auswahl auf der Skala. Die meisten Antwortmöglichkeiten sind jedoch eine Auswahl auf der Skala ohne irgendeiner schriftlichen Angabe zum Medium. Das führte zur Entscheidung diese Variable gänzlich aus der Auswertung zu entfernen, da eine Angabe auf der Skala ohne zusätzlicher Angabe auf welches Medium sich diese bezieht, wertlos und ohne Aussage ist. 
+### Missing values
+
+Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Frage 3, Item 12 des  Fragebogen im Anhang "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala und 3 Ergebnisse mit schriftlichen Angaben kombiniert mit einer Auswahl auf der Skala. 
+
+```{r show andere}
+summary(fragebogen$andere)
+```
+
+
+Die meisten Antwortmöglichkeiten sind jedoch eine Auswahl auf der Skala ohne irgendeiner schriftlichen Angabe zum Medium. Das führte zur Entscheidung diese Variable gänzlich aus der Auswertung zu entfernen, da eine Angabe auf der Skala ohne zusätzlicher Angabe auf welches Medium sich diese bezieht, wertlos und ohne Aussage ist.
 
 ```{r var andere entfernen}
 fragebogen$andere <- NULL
-summary(fragebogen)
 ```
+
+Eine Übersicht aller NA ist im Anhang zu sehen.
+
+
+### Ausreißer
+
+Analyse für Ausreisser hierher
 
 
 \section{Empirie}
 
-In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statistischen Verfahren ausgewertet. Allen statistischen Untersuchungen wird ein Signifikanzniveau von 5% (a=0,05) zugrunde gelegt.
+In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statistischen Verfahren ausgewertet. Allen statistischen Untersuchungen wird ein Signifikanzniveau von 5% ($\alpha = .05$) zugrunde gelegt.
 
 ## Demographische Daten
 
