@@ -145,20 +145,27 @@ fragebogen <- read.csv("./data.csv")
 
 ### Missing values
 
-Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Frage 3, Item 12 des  Fragebogen im Anhang "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala und 3 Ergebnisse mit schriftlichen Angaben kombiniert mit einer Auswahl auf der Skala. 
+Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Fragebogen im Anhang Frage 3, Item 12 "Eine Andere [bitte eintragen]" der Frage "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es 
+
+* 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala  
+* nur 5 Ergebnisse mit schriftlichen Angaben (Beispiel: FAZ, Handelsblatt (FB Nr. 89), Economist (FB Nr. 90)) kombiniert mit einer Auswahl auf der Skala. 
+
+Letzteres wäre die beabsichtigte Antwortkombination gewesen, jedoch hat sich herausgestellt dass die meisten Fragebögen bei diesem Item unvollständig ausgefüllt sind. 
 
 ```{r show andere}
 summary(fragebogen$andere)
 ```
 
 
-Die meisten Antwortmöglichkeiten sind jedoch eine Auswahl auf der Skala ohne irgendeiner schriftlichen Angabe zum Medium. Das führte zur Entscheidung diese Variable gänzlich aus der Auswertung zu entfernen, da eine Angabe auf der Skala ohne zusätzlicher Angabe auf welches Medium sich diese bezieht, wertlos und ohne Aussage ist.
+Die meisten Antwortmöglichkeiten sind eine Auswahl auf der Skala ohne einer schriftlichen Angabe zum Medium. Bei den korrekt ausgefüllten Items gibt es zusätzlich auch Fälle mit mehreren schriftlichen Angaben, die im engeren Sinne auch als nicht korrekt ausgefüllt gewertet werden müssen, weil bei Mehrfachangaben nicht klar ist ob die Auswahl auf der Skala sich auf alle angegeben Medien gleichermaßen bezieht. Zusätzlich würde bei der Auswertung ein weiteres Item und damit eine Verzerrung entstehen. Die Auswahl auf der Skala in Kombination mit der Bewertung eines einzelnen angegeben Mediums wäre die intendierte Form der Auswertung gewesen.
+
+Das führte zur Entscheidung diese Variable gänzlich aus der Auswertung zu entfernen. Die meisten Fälle haben nur eine Auswahl auf der Skala ohne zusätzlicher Angabe auf welches Medium sich diese bezieht, dies ist für die Auswertung  wertlos und ohne Aussage.
 
 ```{r var andere entfernen}
 fragebogen$andere <- NULL
 ```
 
-Eine Übersicht aller NA ist im Anhang zu sehen.
+Eine Übersicht weiterer NA ist im Anhang zu sehen.
 
 
 ### Ausreißer
