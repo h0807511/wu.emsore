@@ -10,7 +10,7 @@ output:
     #template: latex_template.tex
 title: "Zur Wahrnehmung und Einstellung von WU-Studierenden gegenüber Fremden"
 author: Boris T. Podzeit, Yasir Khan
-keywords: "pandoc, r markdown, knitr"
+#keywords: ""
 #bibliography: literatur.bib
 #biblio-style: apsr
 endnote: no
@@ -48,6 +48,20 @@ Tabellenverzeichnis hierher
 
 ## Abbildungsverzeichnis
 Abbildungsverzeichnis hierher
+
+## Datenauszug
+
+Ein Auszug der Daten ist im Anhang zufinden
+```{r Daten einlesen und summary}
+fragebogen <- read.csv("./data.csv")
+# summary(fragebogen)
+```
+
+## Fragebogen
+
+Der Fragebogen ist im Anhang zufinden
+
+
 \clearpage
 
 \section{Fremdenfeindlichkeit als Thema}
@@ -113,16 +127,16 @@ Die im Kurs ausgearbeiteten Hypothesen sollen in dieser Arbeit empirisch geprüf
 
 ## Befragung
 
-Die Befragung wurde schriftlich und im Zeitraum vom 10.5. bis 22.5. mittels Fragebogen bei insgesamt 100 Studierenden der Wirtschaftsuniversität Wien durchgeführt. Die Befragten waren ausschließlich Studenten und Studentinnen der WU, dazu wurde bei der Ausgabe des Fragebogens die Frage gestellt "Bist du Student der WU?". Auf eine Unterscheidung nach Studiengang (Bachelor, Master PhD) wurde verzichtet. Die Fragebögen wurden am Campus in den Gebäuden D2 und TC bei den für die Studenten vorgesehenen Lernplätzen und -räumen verteilt. Die Grundgesamtheit besteht daher aus allen Studierenden der WU. 
+Die Befragung wurde schriftlich und im Zeitraum vom 10.5. bis 22.5. mittels Fragebogen bei insgesamt `r nrow(fragebogen)` Studierenden der Wirtschaftsuniversität Wien durchgeführt. Die Befragten waren ausschließlich Studenten und Studentinnen der WU. Bei der Ausgabe des Fragebogens wurde die Frage gestellt "Bist du Student der WU?" um andere Studierende auszuschließen. Auf eine Unterscheidung nach Studiengang (Bachelor, Master PhD) wurde verzichtet. Die Fragebögen wurden am Campus in den Gebäuden D2 und TC bei den für die Studenten vorgesehenen Lernplätzen und -räumen verteilt. Die Grundgesamtheit besteht daher aus allen Studierenden der WU. 
 
-Die Bereitschaft den Fragebogen auszufüllen war hoch, besonders als das Thema "Migration" erwähnt wurde. Den Beobachtungen zufolge nahmen sich die meisten Personen Zeit den Fragebogen genau auszufüllen. In Einzelfällen gab es mündliches aber auch schriftliches Feedback zum DEsign aber auch inhaltlicher Natur: 
+Die Bereitschaft den Fragebogen auszufüllen war generell hoch, besonders als das Thema "Migration" erwähnt wurde. Den Beobachtungen zufolge nahmen sich die meisten Personen ausreichend Zeit (> 5 min.) den Fragebogen zu beantworten In einigen Fällen gab es von den Personen mündliches oder schriftliches Feedback zum Design aber auch zur inhaltlichen Natur des Fragebogens: 
 
 * Rechtschreibfehler (1x)
 * einen Vorschlag die Bezeichnung der Likert-Blöcke auf der folgenden Seite zu wiederholen (1x)
 * die Nachfrage den Endbericht zuzuschicken (2x)
 * Vorschläge zur Erweiterung und eigenen Gedanken (1x, FB Nr. 83)
 * Nachfragen zum Verständnis (v.a. bei der Definition von AusländerInnen, Begleittext Frage 4)
-* in ~5 Fällen wurden bereits angekreuzte Items wieder ausgebessert (Beispiel: FB Nr. 95/F5, )
+* in ~5 Fällen wurden bereits angekreuzte Items wieder ausgebessert (Beispiel: FB Nr. 95/F5, F6)
 
 Der Fragebogen wurde durchgehend und ohne Änderung bei allen Personen ausgegeben. Die Ausnahme bildet der Rechtschreibfehler der zu einer einmaligen Korrektur des Fragebogens führte (ab ~ Nr. 75 FB). 
 
@@ -149,15 +163,9 @@ Beschreibung der Kodierung
 
 Da es in der Praxis oft vorkommt dass beim Ausfüllen des Fragebogens nicht alle Fragen beantwortet wurden oder Fehler bei der Übertragung passieren, wird eine Datenkontrolle durchgeführt um ungewöhnliche Fälle aufzuspüren und 'missing values' (NAs) festzustellen. Einen Auszug des gesamten Datensatzes ist im Anhang zu finden. 
 
-
-```{r Daten einlesen und summary}
-fragebogen <- read.csv("./data.csv")
-#summary(fragebogen)
-```
-
 ### Missing values
 
-Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Fragebogen im Anhang Frage 3, Item 12 "Eine Andere [bitte eintragen]" der Frage "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es 
+Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Fragebogen im Anhang Frage 3, Item 12 "Eine Andere [bitte eintragen]" der Frage "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es:
 
 * 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala  
 * nur 5 Ergebnisse mit schriftlichen Angaben (Beispiel: FAZ, Handelsblatt (FB Nr. 89), Economist (FB Nr. 90)) kombiniert mit einer Auswahl auf der Skala.
@@ -183,13 +191,17 @@ Diese Umstände führten zur Entscheidung die fragliche Variable gänzlich aus d
 fragebogen$andere <- NULL
 ```
 
-Folgende Fragebögen haben fast ausschliesslich NA bei den Antworten und wurden aus der Auswertung ersatzlos gestrichen:
+Folgende Fragebögen haben fast ausschliesslich NA bei den Antworten und wurden von der Auswertung ausgenommen:
 
 * FB Nr. 47
 * FB Nr. 65
 
 ```{r rows mit vielen NA entfernen}
-# fragebogen <- fragebogen[-c(47, 66), ]
+nrow(fragebogen)
+fragebogen[47, ]
+fragebogen[65, ]
+fragebogen <- fragebogen[-c(47, 65), ]
+nrow(fragebogen)
 ```
 
 Eine Übersicht weiterer NA ist im Anhang zu sehen.
@@ -290,7 +302,7 @@ library(knitr)
 kable(fragebogen[1:5,1:12])
 kable(fragebogen[1:5,13:24])
 kable(fragebogen[1:5,25:36])
-kable(fragebogen[1:5,37:46])
+kable(fragebogen[1:5,37:44])
 ```
 
 \begin{center}
