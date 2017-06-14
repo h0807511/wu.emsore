@@ -113,9 +113,21 @@ Die im Kurs ausgearbeiteten Hypothesen sollen in dieser Arbeit empirisch geprüf
 
 ## Befragung
 
-Die Befragung wurde schriftlich und im Zeitraum vom 10.5. bis 22.5. mittels Fragebogen bei insgesamt 100 Studierenden der Wirtschaftsuniversität Wien durchgeführt. Die Fragebögen wurden am Campus in den Gebäuden D2 und TC bei den für die Studenten vorgesehenen Lernplätzen und -räumen verteilt. Die Bereitschaft den Fragebogen auszufüllen war hoch, besonders als das Thema "Migration" erwähnt wurde. Die Befragten waren ausschließlich StudentInnen der WU, die Grundgesamtheit besteht daher aus allen Studierenden der WU. 
+Die Befragung wurde schriftlich und im Zeitraum vom 10.5. bis 22.5. mittels Fragebogen bei insgesamt 100 Studierenden der Wirtschaftsuniversität Wien durchgeführt. Die Befragten waren ausschließlich Studenten und Studentinnen der WU, dazu wurde bei der Ausgabe des Fragebogens die Frage gestellt "Bist du Student der WU?". Auf eine Unterscheidung nach Studiengang (Bachelor, Master PhD) wurde verzichtet. Die Fragebögen wurden am Campus in den Gebäuden D2 und TC bei den für die Studenten vorgesehenen Lernplätzen und -räumen verteilt. Die Grundgesamtheit besteht daher aus allen Studierenden der WU. 
 
-Es wurde ein einmaliger Pretest mit 3 Personen durchgeführt um Feedback zur Qualität des Fragebogens zu erhalten. Der Test hat zu Anpassungen und Präzisierungen bei der Fragenformulierung geführt. Das grundlegende Design wurde positiv aufgenommen. Alle Testpersonen sind in keinem persönlichen Naheverhältnis gestanden.
+Die Bereitschaft den Fragebogen auszufüllen war hoch, besonders als das Thema "Migration" erwähnt wurde. Den Beobachtungen zufolge nahmen sich die meisten Personen Zeit den Fragebogen genau auszufüllen. In Einzelfällen gab es mündliches aber auch schriftliches Feedback zum DEsign aber auch inhaltlicher Natur: 
+
+* Rechtschreibfehler (1x)
+* einen Vorschlag die Bezeichnung der Likert-Blöcke auf der folgenden Seite zu wiederholen (1x)
+* die Nachfrage den Endbericht zuzuschicken (2x)
+* Vorschläge zur Erweiterung und eigenen Gedanken (1x, FB Nr. 83)
+* Nachfragen zum Verständnis (v.a. bei der Definition von AusländerInnen, Begleittext Frage 4)
+* in ~5 Fällen wurden bereits angekreuzte Items wieder ausgebessert
+
+Der Fragebogen wurde durchgehend und ohne Änderung bei allen Personen ausgegeben. Die Ausnahme bildet der Rechtschreibfehler der zu einer einmaligen Korrektur des Fragebogens führte (ab ~ Nr. 75 FB). 
+
+Im Vorfeld wurde ein einmaliger Pretest mit 3 Personen durchgeführt um Feedback zur Qualität des Fragebogens zu erhalten. Der Test hat zu Anpassungen und Präzisierungen bei der Fragenformulierung geführt. Das grundlegende Design wurde positiv aufgenommen. Alle Testpersonen sind in keinem persönlichen Naheverhältnis zueinander oder mit den Durchführenden gestanden.
+
 
 ## Fragebogen
 
