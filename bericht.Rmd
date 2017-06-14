@@ -122,7 +122,7 @@ Die Bereitschaft den Fragebogen auszufüllen war hoch, besonders als das Thema "
 * die Nachfrage den Endbericht zuzuschicken (2x)
 * Vorschläge zur Erweiterung und eigenen Gedanken (1x, FB Nr. 83)
 * Nachfragen zum Verständnis (v.a. bei der Definition von AusländerInnen, Begleittext Frage 4)
-* in ~5 Fällen wurden bereits angekreuzte Items wieder ausgebessert
+* in ~5 Fällen wurden bereits angekreuzte Items wieder ausgebessert (Beispiel: FB Nr. 95/F5, )
 
 Der Fragebogen wurde durchgehend und ohne Änderung bei allen Personen ausgegeben. Die Ausnahme bildet der Rechtschreibfehler der zu einer einmaligen Korrektur des Fragebogens führte (ab ~ Nr. 75 FB). 
 
@@ -160,7 +160,7 @@ fragebogen <- read.csv("./data.csv")
 Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Fragebogen im Anhang Frage 3, Item 12 "Eine Andere [bitte eintragen]" der Frage "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es 
 
 * 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala  
-* nur 5 Ergebnisse mit schriftlichen Angaben (Beispiel: FAZ, Handelsblatt (FB Nr. 89), Economist (FB Nr. 90)) kombiniert mit einer Auswahl auf der Skala. 
+* nur 5 Ergebnisse mit schriftlichen Angaben (Beispiel: FAZ, Handelsblatt (FB Nr. 89), Economist (FB Nr. 90)) kombiniert mit einer Auswahl auf der Skala.
 
 Letzteres wäre die beabsichtigte Antwortkombination gewesen, jedoch hat sich herausgestellt dass die meisten Fragebögen bei diesem Item unvollständig ausgefüllt sind. 
 
@@ -169,16 +169,30 @@ summary(fragebogen$andere)
 ```
 
 
-Die meisten Antwortmöglichkeiten sind eine Auswahl auf der Skala ohne einer schriftlichen Angabe zum Medium. Bei den korrekt ausgefüllten Items gibt es zusätzlich auch Fälle mit mehreren schriftlichen Angaben, die im engeren Sinne auch als nicht korrekt ausgefüllt gewertet werden müssen, weil bei Mehrfachangaben nicht klar ist ob die Auswahl auf der Skala sich auf alle angegeben Medien gleichermaßen bezieht. Zusätzlich würde bei der Auswertung ein weiteres Item und damit eine Verzerrung entstehen. Die Auswahl auf der Skala in Kombination mit der Bewertung eines einzelnen angegeben Mediums wäre die intendierte Form der Auswertung gewesen.
+Die meisten (ZAHL) Antwortmöglichkeiten sind eine Auswahl auf der Skala ohne einer schriftlichen Angabe zum Medium. 
 
-Das führte zur Entscheidung diese Variable gänzlich aus der Auswertung zu entfernen. Die meisten Fälle haben nur eine Auswahl auf der Skala ohne zusätzlicher Angabe auf welches Medium sich diese bezieht, dies ist für die Auswertung  wertlos und ohne Aussage.
+Bei den korrekt ausgefüllten Items gibt es zusätzlich auch Fälle mit mehreren schriftlichen Angaben, die im engeren Sinne auch als nicht korrekt ausgefüllt gewertet werden müssen. Bei diesen Mehrfachangaben ist nicht klar ob sich die Auswahl auf der Skala auf alle angegeben Medien gleichermaßen bezieht. Zusätzlich würde bei der Auswertung ein weiteres Item und damit eine Verzerrung entstehen. 
+
+Ein weiteres Problem entstand, dass es Angaben von Medien gibt die den Autoren unbekannt sind (Beispiel: FB 96 "Rocks Magazine"). Dies macht es schwierig eine Bewertung vorzunehmen. 
+
+Die Auswahl auf der Skala in Kombination mit der Bewertung eines einzelnen angegebenen (bekannten) Mediums wäre die intendierte Form der Auswertung gewesen.
+
+Diese Umstände führten zur Entscheidung die fragliche Variable gänzlich aus der Auswertung zu entfernen. Die meisten Fälle haben nur eine Auswahl auf der Skala ohne zusätzlicher Angabe auf welches Medium sich diese bezieht, dies ist für die Auswertung  wertlos und ohne Aussage.
 
 ```{r var andere entfernen}
 fragebogen$andere <- NULL
 ```
 
-Eine Übersicht weiterer NA ist im Anhang zu sehen.
+Folgende Fragebögen haben fast ausschliesslich NA bei den Antworten und wurden aus der Auswertung ersatzlos gestrichen:
 
+* FB Nr. 47
+* FB Nr. 65
+
+```{r rows mit vielen NA entfernen}
+# fragebogen <- fragebogen[-c(47, 66), ]
+```
+
+Eine Übersicht weiterer NA ist im Anhang zu sehen.
 
 ### Ausreißer
 
