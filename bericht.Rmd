@@ -18,7 +18,7 @@ endnote: no
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=TRUE)
-knitr::opts_chunk$set(cache=TRUE)
+# knitr::opts_chunk$set(cache=TRUE)
 # Counter für Abbildungen und Tabellen
 c_tables <- 0
 c_plots <- 0
@@ -54,6 +54,7 @@ Abbildungsverzeichnis hierher
 Ein Auszug der Daten ist im Anhang zufinden
 ```{r Daten einlesen und summary}
 fragebogen <- read.csv("./data.csv")
+nrow(fragebogen)
 # summary(fragebogen)
 ```
 
@@ -174,6 +175,7 @@ Letzteres wäre die beabsichtigte Antwortkombination gewesen, jedoch hat sich he
 
 ```{r show andere}
 summary(fragebogen$andere)
+nrow(fragebogen)
 ```
 
 
@@ -189,6 +191,7 @@ Diese Umstände führten zur Entscheidung die fragliche Variable gänzlich aus d
 
 ```{r var andere entfernen}
 fragebogen$andere <- NULL
+nrow(fragebogen)
 ```
 
 Folgende Fragebögen haben fast ausschliesslich NA bei den Antworten und wurden von der Auswertung ausgenommen:
@@ -220,12 +223,9 @@ In diesem Bereich wird der Datensatz aus der Befragung mit verschiedenen statist
 Im demographischen Teil zum Schluss des Fragebogens wurde auf Fragen zu persönlichen Merkmalen bis auf das Geschlecht verzichtet um den Fragebogen möglichst anonym zu halten. Dieser eher "minimalistische" Ansatz hat sich bei der Auswertung zwar als nicht hinderlich jedoch reduzierten sich die Möglichkeiten um zusätzliche "kostenlose" Auswertungen durchzuführe. Beispielsweise wäre es möglich gewesen die UV mit "Alter" zu analysieren, wobei hier die Repräsentativität zu prüfen gewesen wäre. 
 
 ```{r barplot Geschlecht}
-# Einlesen der Spalte "Sex"
 sex_count <- table(fragebogen$sex)
-# Zuweisen von lesbaren Labels zu den Werten der Spalte
 rownames(sex_count) <- c("männlich", "weiblich")
-# Balkendiagramm erzeugen
-barplot(sex_count, main="Geschlecht", ylim=c(0,80), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("lightblue", "mistyrose"))
+barplot(sex_count, main="Geschlecht", ylim=c(0,70), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("lightblue", "mistyrose"))
 box(which="figure", lty="solid", col="black")
 ```
 
@@ -234,8 +234,9 @@ box(which="figure", lty="solid", col="black")
 \bigskip
 \end{center}
 
+## Prüfung der Repräsentativität
 
-In Abbildung `r c_plots` ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen 57 männliche Studierende und 39 weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stich- probe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2013/14 insgesamt 21.157 Personen an der WU studiert haben.13 11.137 davon sind männliche und 10.020 sind weibliche Studieren- de. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2014/15 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Stu- dierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Ver- teilung der Grundgesamtheit unter- scheidet. Die beobachteten und er- warteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
+In Abbildung `r c_plots` ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen `r sex_count[1]` männliche Studierende und `r sex_count[2]` weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stichprobe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2015/16 insgesamt 21.157 Personen an der WU studiert haben.13 11.137 davon sind männliche und 10.020 sind weibliche Studieren- de. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2016/17 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Studierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Verteilung der Grundgesamtheit unterscheidet. Die beobachteten und erwarteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
 
 +-----------+-------------------------------------------------------------------------------------------+
 | H~0~:     | Die Verteilung der Geschlechter unterscheidet sich *nicht* von der erwarteten Verteilung  |
@@ -255,27 +256,133 @@ chisq.test(na.omit(fragebogen$sex))
 
 Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde und lautet: "Ausmaß der Fremdenfeindlichkeit". Zur Messung der AV wurde den Studierenden eine Likertskala mit 10 Items vorgelegt. Die Antwortmöglichkeiten waren auf einer 6-stufigen Intervallskala mit den Ausprägungen "Stimme sehr zu" bis "Stimme gar nicht zu" vorgegeben. Die Frage lautete "Wie ist deine Meinung zur Migration?" (siehe im Anhang Frage 6 im Fragebogen). 
 
-```{r Hauptkomponentenanalyse: AV}
-library("psych")
-av <- na.omit(fragebogen[,35:44])
-library("REdaS")
-bart_spher(av)
-kmosmd <- KMOS(av)
-print(kmosmd, stats="KMO")
-print(kmosmd, stats="MSA", sort=TRUE, digits=3, show=1:5)
-VSS.scree(av)
+
++-----------+------------------------------------------------------------------------------------------------------------------+
+| Variablen | Item                                                                                                             |
++===========+==================================================================================================================+
+| heimat    | Wenn Arbeitsplätze knapp werden, sollte man AusländerInnen wieder in Ihre Heimat schicken                        |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| rechte    | AusländerInnen sollten nicht die gleichen Rechte in allen Lebensbereichen haben wie ÖsterreicherInnen            |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| kultur    | Ich bin nicht für die Anwesenheit von AusländerInnen weil sie unsere Kultur negativ beeinflußen                  |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| verlassen | Es wäre am besten, wenn alle AusländerInnen Österreich verlassen würden                                          |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| partner   | In Österreich lebende AusländerInnen sollen sich Ihre (Ehe-)partner unter ihren eigenen Landsleuten wählen       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| knapp     | Wenn Studierendenplätze an der WU noch knapper werden, sollte man bei der Zulassung InländerInnen bevorzugen     |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| pflegen   | AusländerInnen sollen ihre Kultur nicht bei uns pflegen, sie sollen sich an die Kultur in Österreich anpassen    |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| politik   | Politiker sollen sich vor allem für InländerInnen einsetzen                                                      |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| verdienen | AusländerInnen sollen sich nach dem Zuzug erstmal die Privilegien des Sozialstaates in Österreich (...)verdienen |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| egal      | Wenn ich mit AusländerInnen in einer Arbeitsgruppe bin, ist mir das nicht egal                                   |
++-----------+------------------------------------------------------------------------------------------------------------------+
+
+
+Um eine Dimensionsreduktion zu erreichen wird eine Hauptkomponentenanalyse durchgeführt da die Zuordnung der Items zu spezifischen Komponenten eine einfachere Interpretation der Fremdenfeindlichkeit ermöglicht. 
+
+NOCH SCHREIBEN: warum item 10 "egal" weggelassen (weggelassen weil Personen vermutlich falsch angekreuzt -> missverständliches item)
+
+```{r barplot var egal }
+countr <- table(fragebogen$egal)
+rownames(countr) <- c("1", "2", "3", "4", "5", "6")
+barplot(countr, main="Variable 'egal'", ylim=c(0,70), xlab="Item: 'Wenn ich mit AusländerInnen in einer Arbeitsgruppe bin, ist mir das nicht egal'", ylab="Anzahl")
 box(which="figure", lty="solid", col="black")
-pca.av <- principal(av, 5, rotate="none")
-pca.av
-pca.av_r <- principal(av,5)
-print(pca.av_r, cut=0.5, sort=TRUE, digits=2)
-fa.diagram(pca.av_r, cut=0.5, cex=0.8, rsize=0.5, main="")
-box(which="figure", lty="solid", col="black")
-pca.av2 <- principal(av,2)
-print(pca.av2, cut=0.5, sort=TRUE, digits=2)
 ```
 
 
+Zunächst werden die Voraussetzungen für die Hauptkomponentenanalyse geprüft. 
+
+```{r Hauptkomponentenanalyse: Bartlett-Test}
+library("psych")
+# fragebogen[1:2,34:42]
+av <- fragebogen[,34:42]
+nrow(av)
+library("REdaS")
+bart_spher(av)
+```
+
+
+Die Teststatistik zeigt ein klares Ergebnis, da die Teststatistik einen p-Wert unter 0.00000000000000022 erzeugt. Je kleiner der p-Wert ist, desto mehr Grund gibt es, die Nullhypothese zu verwerfen. Die Nullhypothese, dass es keine Korrelationen zwischen den Variablen gibt kann verworfen werden und das Resultat daher als statistisch signifikant (überzufällig) bezeichnet werden.
+
+
+```{r Hauptkomponentenanalyse: KMO Kriterium}
+kmosmd <- KMOS(av)
+print(kmosmd, stats="KMO")
+print(kmosmd, stats="MSA", sort=TRUE, digits=3, show=1:5)
+```
+
+Der Wert des KMO liegt bei 0.8155905 und die MSA-Werte liegen bei > als 0,7. Die Daten sind also als sehr gut geeignet einzustufen weil genügend Informationen zur Durchführung einer Hauptkomponentenanalyse vorliegen. 
+
+```{r Hauptkomponentenanalyse: Scree plot}
+VSS.scree(av)
+box(which="figure", lty="solid", col="black")
+```
+
+Der Screeplot zeigt, dass die ersten 2 Komponenten einen Eigenwert > 1 haben, die anderen liegen unter diesem Kriterium. 
+
+Komponenten ergeben sich aus der Gruppierung von miteinander korrelierter Variablen wobei die Komponenten selbst miteinander nicht korrelieren. Die Größe des einzelnen Eigenwertes beschreibt den Anteil der Varianz in den Daten, die durch diese Komponente erklärt wird. Der Eigenwert wird durch die Anzahl der Items die zu einer Komponente zusammengefasst werden und der Korrelation innerhalb dieser Gruppe bestimmt. Je größer der Eigenwert desto mehr trägt er zur Erklärung der Gesamtstreuung bei. Komponenten mit einem Wert von 1 liefern den gleichen Erklärungswert wie die einzelne ursprüngliche Variable, darunter ist der Erklärungswert sogar geringer. 
+
+```{r Hauptkomponentenanalyse: Varianz}
+pca.av <- principal(av, 2, rotate="none")
+pca.av
+```
+
+Komponente PC1 erklärt 53% der Varianz und Komponente PC2 14%. Beide Komponenten zusammen erklären einen Gutteil der Varianz, 67%, und sind > 1. Die Hinzunahme weiterer Variablen ist nicht sinnvoll weil alle weiteren Eigenwerte kleiner als 1 sind. 
+
+```{r Hauptkomponentenanalyse }
+pca.av_r <- principal(av, 2)
+pca.av_r$criteria <- NULL
+print(pca.av_r, cut=0.43, sort=TRUE, digits=3)
+```
+
+Es werden 2 Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die Komponenten mit den hoch ($\ge 0.43$) auf ihnen ladenden Variablen sind:
+
+
+1. Komponente (RC1): moderate Einstellung (Eigenwert: 3.092, erklärte Varianz: 34,4%)
+  "Bevorzugung von Inländern bei Knappheit von Studienplätzen"  .769
+  "Anpassung an Kultur in Österreich" .844
+  "Einsatz Politiker für Inländer"  .829
+  "Verdienst Privilegien Sozialstaat" .765
+2. Komponente (RC2): aggressive Einstellung (Eigenwert: 2.972, erklärte Varianz: 32,5%)
+  "Wieder in die Heimat schicken" .769
+  "Nicht die gleichen Rechte wie Österreicher"  .662
+  "Negative Beeinflussung Kultur" .794
+  "Österreich verlassen"  .901
+  "Ehepartner unter eigenen Landsleuten"  .431
+
+--> Weitere Erklärung noch aus Buch S.465
+
+
+```{r Hauptkomponentenanalyse: diagramm}
+fa.diagram(pca.av_r, cut=0.43, cex=0.8, rsize=0.5, main="")
+box(which="figure", lty="solid", col="black")
+```
+
+
+```{r barplot var rechte }
+countr <- table(fragebogen$rechte)
+rownames(countr) <- c("1", "2", "3", "4", "5", "6")
+barplot(countr, main="Variable 'rechte'", ylim=c(0,60), xlab="Item: AusländerInnen sollten nicht die gleichen Rechte \n in allen Lebensbereichen haben wie ÖsterreicherInnen", ylab="Anzahl")
+box(which="figure", lty="solid", col="black")
+```
+
+Eine Analyse der Variablen der 2. Komponente zeigt, dass die gestellten Fragen von der Mehrheit stark abgelehnt werden. 
+
+```{r Hauptkomponentenanalyse: factor scores}
+round(head(pca.av_r$scores), 4)
+av_r.scores <- data.frame(pca.av_r$scores)
+names(av_r.scores) <- c("moderat", "aggressiv")
+round(head(av_r.scores), 4)
+
+av_r.scores$moderat
+av_r.scores$aggressiv
+```
+
+In der weiteren Analyse wird daher mit einer metrischen und normalverteilten abhängigen Variable weitergearbeitet. 
 
 ## Hypothese 1
 
@@ -289,6 +396,58 @@ print(pca.av2, cut=0.5, sort=TRUE, digits=2)
 
 ## Hypothese 6
 
+"Männer sind fremdenfeindlicher als Frauen."
+Gibt es Unterschiede bei Fremdenfeindlichkeit zwischen FRauen und Männern?
+
+### Welche Variablen kommen vor?
+  av_r.scores$moderat, Fremdenfeindlichkeit moderat, metrisch
+  av_r.scores$aggressiv, Fremdenfeindlichkeit stark, metrisch
+  sex, Geschlecht, kategorial
+  
+  Erklärende Variable: sex
+  Responsevariable: Fremdenfeindlichkeit
+
+### Welche Methode ist angebracht?
+t-Test oder Mann-Whitney U-Test
+
+### Welche Hypothesen können formuliert werden?
+
++-----------+--------------------------------------------------------------------+
+| H~0~:     | Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich         |
++-----------+--------------------------------------------------------------------+
+| H~0~:     | Die Fremdenfeindlichkeit unterscheidet sich bei Männern und Frauen |
++-----------+--------------------------------------------------------------------+
+
+### Kurzbericht
+
+
+```{r boxplot 1}
+boxplot(av_r.scores$moderat ~ fragebogen$sex)
+```
+
+```{r boxplot 2}
+boxplot(av_r.scores$aggressiv ~ fragebogen$sex)
+```
+
+
+```{r densbox}
+densbox(av_r.scores$moderat ~ fragebogen$sex)
+```
+
+
+```{r bartlett test}
+bartlett.test(av_r.scores$moderat~fragebogen$sex)
+```
+
+Bartlett-Test -> nicht signifikant (p-value = 0.8992) -> t-Test
+
+
+```{r t-test}
+t.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRUE)
+```
+
+
+Nullhypothese kann nicht verworfen werden (p-value = 0.7747, größer als .05) -> Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich. 
 
 \clearpage
 \section{Anhang}
