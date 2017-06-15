@@ -354,14 +354,13 @@ Es werden 2 Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die
   "Österreich verlassen"  .901
   "Ehepartner unter eigenen Landsleuten"  .431
 
---> Weitere Erklärung noch aus Buch S.465
-
 
 ```{r Hauptkomponentenanalyse: diagramm}
 fa.diagram(pca.av_r, cut=0.43, cex=0.8, rsize=0.5, main="")
 box(which="figure", lty="solid", col="black")
 ```
 
+--> Weitere Erklärung noch aus Buch S.465 zb Eine Analyse der Variablen der 2. Komponente zeigt, dass die gestellten Fragen von der Mehrheit stark abgelehnt werden -> aggressive Fragestellung -> hohe Ablehnung -> keine ausgeprägte Fremdenfeindlichkeit
 
 ```{r barplot var rechte }
 countr <- table(fragebogen$rechte)
@@ -370,7 +369,7 @@ barplot(countr, main="Variable 'rechte'", ylim=c(0,60), xlab="Item: AusländerIn
 box(which="figure", lty="solid", col="black")
 ```
 
-Eine Analyse der Variablen der 2. Komponente zeigt, dass die gestellten Fragen von der Mehrheit stark abgelehnt werden. 
+Für die weitere Analyse werden factor scores angelegt. 
 
 ```{r Hauptkomponentenanalyse: factor scores}
 round(head(pca.av_r$scores), 4)
@@ -378,11 +377,14 @@ av_r.scores <- data.frame(pca.av_r$scores)
 names(av_r.scores) <- c("moderat", "aggressiv")
 round(head(av_r.scores), 4)
 
+# Weitere Analyse mit den folgenden beiden Variablen:
 av_r.scores$moderat
 av_r.scores$aggressiv
 ```
 
-In der weiteren Analyse wird daher mit einer metrischen und normalverteilten abhängigen Variable weitergearbeitet. 
+In der weiteren Analyse wird mit zwei metrischen Variablen weitergearbeitet. 
+
+
 
 ## Hypothese 1
 
@@ -415,7 +417,7 @@ t-Test oder Mann-Whitney U-Test
 +-----------+--------------------------------------------------------------------+
 | H~0~:     | Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich         |
 +-----------+--------------------------------------------------------------------+
-| H~0~:     | Die Fremdenfeindlichkeit unterscheidet sich bei Männern und Frauen |
+| H~A~:     | Die Fremdenfeindlichkeit unterscheidet sich bei Männern und Frauen |
 +-----------+--------------------------------------------------------------------+
 
 ### Kurzbericht
