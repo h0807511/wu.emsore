@@ -2,10 +2,10 @@
 output: 
   pdf_document:
     citation_package: natbib
-    #keep_tex: true
-    #fig_caption: true
-    number_sections: true
-    #toc: true
+    #keep_tex: trü
+    #fig_caption: trü
+    number_sections: trü
+    #toc: trü
     latex_engine: pdflatex
     #template: latex_template.tex
 title: "Zur Wahrnehmung und Einstellung von WU-Studierenden gegenüber Fremden"
@@ -17,13 +17,12 @@ endnote: no
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE)
-# knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(echo=FALSE)
+# knitr::opts_chunk$set(cache=TRü)
 # Counter für Abbildungen und Tabellen
 c_tables <- 0
 c_plots <- 0
 ```
-
 \begin{center}
 \vspace{5mm}
 Forschungsarbeit für die Kurse\\
@@ -37,7 +36,7 @@ Sommersemester 2017
 \clearpage
 
 \begin{abstract}
-Im vorliegenden Paper wird überprüft, ob die Ausprägung von Fremdenfeindlichkeit bei WU StudentInnen mit dem persönlichen und universitären Umfeld, mit dem Konsum bestimmter Medien und persönlichen Merkmalen (Geschlecht) in Zusammenhang steht. Die Daten wurden mittels schriftlichem Fragebogen bei +100 Studenten der WU Wien erhoben. Es konnte gezeigt werden daß, bla bla männliche Studenten ein signifikant höheres Maß an ausländerfeindlicher Einstellung aufweisen als weibliche Studenten. Die Befragten, die freundschaftlichen Kontakt zu Personen mit Migrationshintergrund pflegen, wiesen unabhängig vom Geschlecht ein signifikant geringeres Maß an Fremdenfeindlichkeit auf als jene, die keinen Kontakt zu Personen mit Migrationshintergrund hatten. 
+Im vorliegenden Paper wird überprüft, ob die Ausprägung von Fremdenfeindlichkeit bei WU StudentInnen mit dem persönlichen und universitären Umfeld, mit dem Konsum bestimmter Medien und persönlichen Merkmalen (Geschlecht) in Zusammenhang steht. Die Daten wurden mittels schriftlichem Fragebogen bei +100 Studenten der WU Wien erhoben. Es konnte gezeigt werden dass, bla bla männliche Studenten ein signifikant höheres Mass an ausländerfeindlicher Einstellung aufweisen als weibliche Studenten. Die Befragten, die freundschaftlichen Kontakt zu Personen mit Migrationshintergrund pflegen, wiesen unabhängig vom Geschlecht ein signifikant geringeres Mass an Fremdenfeindlichkeit auf als jene, die keinen Kontakt zu Personen mit Migrationshintergrund hatten. 
 \end{abstract}
 
 \renewcommand*\contentsname{Inhaltsverzeichnis}
@@ -68,9 +67,9 @@ Der Fragebogen ist im Anhang zufinden
 \section{Fremdenfeindlichkeit als Thema}
 
 ## Warum das Thema Fremdenfeindlichkeit?
-Fremdenfeindlichkeit und Migration ist besonders in den letzen beiden Jahren ein heiß diskutiertes Thema geworden. Die Gründe für Fremdenfeindlichkeit mögen auf den ersten Blick durch Zuwanderung und die damit einhergehende Änderung demographischer Verhältnisse verursacht worden sein, eine große Rolle spielt jedoch die Wahrnehmung von Fremden und die damit einhergehenden Gefühlslagen der Menschen. Diese Entwicklung macht es notwendig zu verstehen welche Faktoren für die Entstehung, Verbreitung und Verfestigung von Fremdenfeindlichkeit verantwortlich sind, denn Ausländer (auch Deutsche, Schweizer, ..) haben häufig mit Diskriminierung zu kämpfen. In demokratischen Staaten kann jedoch nur die Gleichberechtigung aller das Ziel sein und daher ist es notwendig, Mittel und Wege zu erforschen um ein besser integriertes Zusammenleben zu ermöglichen. 
+Fremdenfeindlichkeit und Migration ist besonders in den letzen beiden Jahren ein heiss diskutiertes Thema geworden. Die Gründe für Fremdenfeindlichkeit mögen auf den ersten Blick durch Zuwanderung und die damit einhergehende änderung demographischer Verhältnisse verursacht worden sein, eine grosse Rolle spielt jedoch die Wahrnehmung von Fremden und die damit einhergehenden Gefühlslagen der Menschen. Diese Entwicklung macht es notwendig zu verstehen welche Faktoren für die Entstehung, Verbreitung und Verfestigung von Fremdenfeindlichkeit verantwortlich sind, denn Ausländer (auch Deutsche, Schweizer, ..) haben häufig mit Diskriminierung zu kämpfen. In demokratischen Staaten kann jedoch nur die Gleichberechtigung aller das Ziel sein und daher ist es notwendig, Mittel und Wege zu erforschen um ein besser integriertes Zusammenleben zu ermöglichen. 
 
-Mit dem Thema der Wahrnehmung von Fremden die Ursachen für die Entstehung von Stereotypen haben sich unzählige Arbeiten beschäftigt. Die Entstehung von Ängsten  gegenüber Fremden wird von Stolz (2000) folgendermaßen kategorisiert: 
+Mit dem Thema der Wahrnehmung von Fremden die Ursachen für die Entstehung von Stereotypen haben sich unzählige Arbeiten beschäftigt. Die Entstehung von ängsten  gegenüber Fremden wird von Stolz (2000) folgendermassen kategorisiert: 
 
 * Konkurrenz um Wohlstand, Marktposition und Statussymbole
 * Konkurrenz Raum und infrastruktur
@@ -80,16 +79,17 @@ Mit dem Thema der Wahrnehmung von Fremden die Ursachen für die Entstehung von S
 * Bedrohung von Kultur, Gemeinschaft und sozialem Frieden
 
 
+
 ## Der Begriff der Fremdenfeindlichkeit
 
-Fremdenfeindlichkeit ist ist die negative Bewertung von Menschen, die bestimmte  charakterisierende Eigenschaften aufweisen wie beispielsweise Hautfarbe, Sprache oder kulturelle Praktiken. Menschen mit „abweichenden“ Eigenschaften werden als fremd identifiziert und als nicht zur Eigengruppe zugehörig empfunden. Fremdenfeindlichkeit wird fälschlicherweise gemeinhin mit Ausländerfeindlichkeit gleich gesetzt - doch das stimmt nicht. Wörtlich genommen, bezeichnet Ausländerfeindlichkeit die Angst vor einer Person die aus einem anderen Land stammt. Fremdenfeindlichkeit hingegen die Angst vor Menschen „die anders sind“. Xenophobie bezeichnet eher eine Persönlichkeitsstörung bei der die Angst im Vordergrund steht. In der vorliegenden Arbeit und im Fragebogen wird mit dem Begriff Ausländerfeindlichkeit gearbeitet. 
+Fremdenfeindlichkeit ist ist die negative Bewertung von Menschen, die bestimmte  charakterisierende Eigenschaften aufweisen wie beispielsweise Hautfarbe, Sprache oder kulturelle Praktiken. Menschen mit abweichenden Eigenschaften werden als fremd identifiziert und als nicht zur Eigengruppe zugehörig empfunden. Fremdenfeindlichkeit wird fälschlicherweise gemeinhin mit Ausländerfeindlichkeit gleich gesetzt - doch das stimmt nicht. Wörtlich genommen, bezeichnet Ausländerfeindlichkeit die Angst vor einer Person die aus einem anderen Land stammt. Fremdenfeindlichkeit hingegen die Angst vor Menschendie anders sind. Xenophobie bezeichnet eher eine Persönlichkeitsstörung bei der die Angst im Vordergrund steht. In der vorliegenden Arbeit und im Fragebogen wird mit dem Begriff Ausländerfeindlichkeit gearbeitet. 
 
 
 ## Mögliche Einflussfaktoren
 
 Hierher Text persönliches Umfeld (Stichwort Kontakthypothese), persönliche Merkmale (Männer eher fremdenfeindlich? -> rechte Aufmärsche, Gewalttaten), Bildungsniveau
 
-Auch das Bildungsniveau spielt eine Rolle bei der Entstehung von Fremdenfeindlichkeit, denn Bildung gilt als wichtiger Faktor für die Vermittlung von demokratischen Gedanken und Werten. Aber ist Immunität von Höhergebildeten gegenüber menschenfeindlichen Ideologien zwangsläufig gegeben? Aktuelle Wahlanalysen in Deutschland zeigen beispielsweise, dass AfD-Wähler in allen Wählerschichten zu finden sind. Der negative Zusammenhang von Bildung und Fremdenfeindlichkeit gilt offenbar nicht in allen Kontexten (Susanne Rippl, 2016). Höher gebildete haben jedoch meist stärkere kognitive Fähigkeiten; komplexe gesellschaftliche Zusammenhänge werden gedanklich durchdrungen, Vorurteile zur Kompensation sind dann nicht notwendig. Niedrige Bildungsgrade führen hingegen eher zu geringeren Anpassungsgraden. Sozialer Wandel führt in dieser Gruppe zu vermehrten Sicherheitsstreben und der „Beschwörung der Eigengruppe“ (Citation needed). 
+Auch das Bildungsniveau spielt eine Rolle bei der Entstehung von Fremdenfeindlichkeit, denn Bildung gilt als wichtiger Faktor für die Vermittlung von demokratischen Gedanken und Werten. Aber ist Immunität von Höhergebildeten gegenüber menschenfeindlichen Ideologien zwangsläufig gegeben? Aktülle Wahlanalysen in Deutschland zeigen beispielsweise, dass AfD-Wähler in allen Wählerschichten zu finden sind. Der negative Zusammenhang von Bildung und Fremdenfeindlichkeit gilt offenbar nicht in allen Kontexten (Susanne Rippl, 2016). Höhher gebildete haben jedoch meist stärkere kognitive Fähigkeiten; komplexe gesellschaftliche Zusammenhänge werden gedanklich durchdrungen, Vorurteile zur Kompensation sind dann nicht notwendig. Niedrige Bildungsgrade führen hingegen eher zu geringeren Anpassungsgraden. Sozialer Wandel fährt in dieser Gruppe zu vermehrten Sicherheitsstreben und der Beschwörung der Eigengruppe  (Citation needed). 
 
 ## Hypothesen
 +-------+----------------------------------------------------+--------------------+
@@ -114,11 +114,11 @@ Auch das Bildungsniveau spielt eine Rolle bei der Entstehung von Fremdenfeindlic
 |       | steht, desto besser sind die Einstellungen Aus-    |                    |
 |       | länderInnen gegenüber.                             |                    |
 +-------+----------------------------------------------------+--------------------+
-| 6     | Männer sind fremdenfeindlicher als Frauen.         |                    |
+| 6     | Männer sind fremdenfeindlicher als Fraün.         |                    |
 +-------+----------------------------------------------------+--------------------+
 
 \begin{center}
-\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Übersicht der Hypothesen}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: übersicht der Hypothesen}
 \bigskip
 \end{center}
 
@@ -128,7 +128,7 @@ Die im Kurs ausgearbeiteten Hypothesen sollen in dieser Arbeit empirisch geprüf
 
 ## Befragung
 
-Die Befragung wurde schriftlich und im Zeitraum vom 10.5. bis 22.5. mittels Fragebogen bei insgesamt `r nrow(fragebogen)` Studierenden der Wirtschaftsuniversität Wien durchgeführt. Die Befragten waren ausschließlich Studenten und Studentinnen der WU. Bei der Ausgabe des Fragebogens wurde die Frage gestellt "Bist du Student der WU?" um andere Studierende auszuschließen. Auf eine Unterscheidung nach Studiengang (Bachelor, Master PhD) wurde verzichtet. Die Fragebögen wurden am Campus in den Gebäuden D2 und TC bei den für die Studenten vorgesehenen Lernplätzen und -räumen verteilt. Die Grundgesamtheit besteht daher aus allen Studierenden der WU. 
+Die Befragung wurde schriftlich und im Zeitraum vom 10.5. bis 22.5. mittels Fragebogen bei insgesamt `r nrow(fragebogen)` Studierenden der Wirtschaftsuniversität Wien durchgeführt. Die Befragten waren ausschliesslich Studenten und Studentinnen der WU. Bei der Ausgabe des Fragebogens wurde die Frage gestellt "Bist du Student der WU?" um andere Studierende auszuschliessen. Auf eine Unterscheidung nach Studiengang (Bachelor, Master PhD) wurde verzichtet. Die Fragebögen wurden am Campus in den Gebäuden D2 und TC bei den für die Studenten vorgesehenen Lernplätzen und -räumen verteilt. Die Grundgesamtheit besteht daher aus allen Studierenden der WU. 
 
 Die Bereitschaft den Fragebogen auszufüllen war generell hoch, besonders als das Thema "Migration" erwähnt wurde. Den Beobachtungen zufolge nahmen sich die meisten Personen ausreichend Zeit (> 5 min.) den Fragebogen zu beantworten In einigen Fällen gab es von den Personen mündliches oder schriftliches Feedback zum Design aber auch zur inhaltlichen Natur des Fragebogens: 
 
@@ -137,20 +137,20 @@ Die Bereitschaft den Fragebogen auszufüllen war generell hoch, besonders als da
 * die Nachfrage den Endbericht zuzuschicken (2x)
 * Vorschläge zur Erweiterung und eigenen Gedanken (1x, FB Nr. 83)
 * Nachfragen zum Verständnis (v.a. bei der Definition von AusländerInnen, Begleittext Frage 4)
-* in ~5 Fällen wurden bereits angekreuzte Items wieder ausgebessert (Beispiel: FB Nr. 95/F5, F6)
+* in 5 Fällen wurden bereits angekreuzte Items wieder ausgebessert (Beispiel: FB Nr. 95/F5, F6)
 
-Der Fragebogen wurde durchgehend und ohne Änderung bei allen Personen ausgegeben. Die Ausnahme bildet der Rechtschreibfehler der zu einer einmaligen Korrektur des Fragebogens führte (ab ~ Nr. 75 FB). 
+Der Fragebogen wurde durchgehend und ohne änderung bei allen Personen ausgegeben. Die Ausnahme bildet der Rechtschreibfehler der zu einer einmaligen Korrektur des Fragebogens führte (ab Nr. 75 FB). 
 
-Im Vorfeld wurde ein einmaliger Pretest mit 3 Personen durchgeführt um Feedback zur Qualität des Fragebogens zu erhalten. Der Test hat zu Anpassungen und Präzisierungen bei der Fragenformulierung geführt. Das grundlegende Design wurde positiv aufgenommen. Alle Testpersonen sind in keinem persönlichen Naheverhältnis zueinander oder mit den Durchführenden gestanden.
+Im Vorfeld wurde ein einmaliger Pretest mit 3 Personen durchgeführt um Feedback zur Qualität des Fragebogens zu erhalten. Der Test hat zu Anpassungen und Präzisierungen bei der Fragenformulierung geführt. Das grundlegende Design wurde positiv aufgenommen. Alle Testpersonen sind in keinem persönlichen Naheverhältnis züinander oder mit den Durchführenden gestanden.
 
 
 ## Fragebogen
 
-In ausgedruckter Form besteht der Fragebogen aus 4 A4-Seiten und umfasst 7 Fragen die großteils mit Hilfe von Item-Batterien in Form von Likert-Skalen erhoben wurden. Die der Likert-Skala zugrunde liegenden Intervallskala waren sechsstufig. Die Antwortmöglichkeiten waren die beiden Extrempole "Trifft sehr zu"" (1) und "Trifft gar nicht zu" (6) mit  dazwischenliegenden Werte die mit Zahlen (2,3,4,5) ohne Beschriftung angegeben worden sind um einerseits den Fragebogen optisch nicht zu überladen und andererseits subjektiv wahrgenommene Unterschiede bei Abstufungen in Textform zu vermeiden.
+In ausgedruckter Form besteht der Fragebogen aus 4 A4-Seiten und umfasst 7 Fragen die grossteils mit Hilfe von Item-Batterien in Form von Likert-Skalen erhoben wurden. Die der Likert-Skala zugrunde liegenden Intervallskala waren sechsstufig. Die Antwortmöglichkeiten waren die beiden Extrempole "Trifft sehr zu" (1) und "Trifft gar nicht zu" (6) mit  dazwischenliegenden Werte die mit Zahlen (2,3,4,5) ohne Beschriftung angegeben worden sind um einerseits den Fragebogen optisch nicht zu überladen und andererseits subjektiv wahrgenommene Unterschiede bei Abstufungen in Textform zu vermeiden.
 
 ## Variablen
 
-Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde, diese lautet: "Ausmaß der Fremdenfeindlichkeit". Es wird der Einfluss verschiedener Faktoren auf die Stärke der Fremdenfeindlichkeit untersucht. Aus diesem Grund wird dieselbe AV in der Untersuchung aller Hypothesen zur Verwendung kommen. Die unabhängigen Variablen (UV) sind passend zur Fragestellung für jede Hypothese unterschiedlich gewählt. (erklärung welche metrische, kategoriale)
+Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde, diese lautet: "Ausmass der Fremdenfeindlichkeit". Es wird der Einfluss verschiedener Faktoren auf die Stärke der Fremdenfeindlichkeit untersucht. Aus diesem Grund wird dieselbe AV in der Untersuchung aller Hypothesen zur Verwendung kommen. Die unabhängigen Variablen (UV) sind passend zur Fragestellung für jede Hypothese unterschiedlich gewählt. (erklärung welche metrische, kategoriale)
 
 
 \section{Der Datensatz}
@@ -162,11 +162,11 @@ Beschreibung der Kodierung
 
 ## Datenkontrolle 
 
-Da es in der Praxis oft vorkommt dass beim Ausfüllen des Fragebogens nicht alle Fragen beantwortet wurden oder Fehler bei der Übertragung passieren, wird eine Datenkontrolle durchgeführt um ungewöhnliche Fälle aufzuspüren und 'missing values' (NAs) festzustellen. Einen Auszug des gesamten Datensatzes ist im Anhang zu finden. 
+Da es in der Praxis oft vorkommt dass beim Ausfüllen des Fragebogens nicht alle Fragen beantwortet wurden oder Fehler bei der übertragung passieren, wird eine Datenkontrolle durchgeführt um ungewöhnliche Fälle aufzuspüren und 'missing valüs' (NAs) festzustellen. Einen Auszug des gesamten Datensatzes ist im Anhang zu finden. 
 
-### Missing values
+### Missing valüs
 
-Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Fragebogen im Anhang Frage 3, Item 12 "Eine Andere [bitte eintragen]" der Frage "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individuelles Medium schriftlich anzugeben. Im Ergebnis gibt es:
+Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Fragebogen im Anhang Frage 3, Item 12 "Eine Andere [bitte eintragen]" der Frage "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individülles Medium schriftlich anzugeben. Im Ergebnis gibt es:
 
 * 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala  
 * nur 5 Ergebnisse mit schriftlichen Angaben (Beispiel: FAZ, Handelsblatt (FB Nr. 89), Economist (FB Nr. 90)) kombiniert mit einer Auswahl auf der Skala.
@@ -181,7 +181,7 @@ nrow(fragebogen)
 
 Die meisten (ZAHL) Antwortmöglichkeiten sind eine Auswahl auf der Skala ohne einer schriftlichen Angabe zum Medium. 
 
-Bei den korrekt ausgefüllten Items gibt es zusätzlich auch Fälle mit mehreren schriftlichen Angaben, die im engeren Sinne auch als nicht korrekt ausgefüllt gewertet werden müssen. Bei diesen Mehrfachangaben ist nicht klar ob sich die Auswahl auf der Skala auf alle angegeben Medien gleichermaßen bezieht. Zusätzlich würde bei der Auswertung ein weiteres Item und damit eine Verzerrung entstehen. 
+Bei den korrekt ausgefüllten Items gibt es zusätzlich auch Fälle mit mehreren schriftlichen Angaben, die im engeren Sinne auch als nicht korrekt ausgefüllt gewertet werden müssen. Bei diesen Mehrfachangaben ist nicht klar ob sich die Auswahl auf der Skala auf alle angegeben Medien gleichermassen bezieht. Zusätzlich würde bei der Auswertung ein weiteres Item und damit eine Verzerrung entstehen. 
 
 Ein weiteres Problem entstand, dass es Angaben von Medien gibt die den Autoren unbekannt sind (Beispiel: FB 96 "Rocks Magazine"). Dies macht es schwierig eine Bewertung vorzunehmen. 
 
@@ -207,9 +207,9 @@ fragebogen <- fragebogen[-c(47, 65), ]
 nrow(fragebogen)
 ```
 
-Eine Übersicht weiterer NA ist im Anhang zu sehen.
+Eine übersicht weiterer NA ist im Anhang zu sehen.
 
-### Ausreißer
+### Ausreisser
 
 Analyse für Ausreisser hierher
 
@@ -225,7 +225,7 @@ Im demographischen Teil zum Schluss des Fragebogens wurde auf Fragen zu persönl
 ```{r barplot Geschlecht}
 sex_count <- table(fragebogen$sex)
 rownames(sex_count) <- c("männlich", "weiblich")
-barplot(sex_count, main="Geschlecht", ylim=c(0,70), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("lightblue", "mistyrose"))
+barplot(sex_count, main="Geschlecht", ylim=c(0,70), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("lightblü", "mistyrose"))
 box(which="figure", lty="solid", col="black")
 ```
 
@@ -239,9 +239,9 @@ box(which="figure", lty="solid", col="black")
 In Abbildung `r c_plots` ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen `r sex_count[1]` männliche Studierende und `r sex_count[2]` weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stichprobe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2015/16 insgesamt 21.157 Personen an der WU studiert haben.13 11.137 davon sind männliche und 10.020 sind weibliche Studieren- de. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2016/17 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Studierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Verteilung der Grundgesamtheit unterscheidet. Die beobachteten und erwarteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
 
 +-----------+-------------------------------------------------------------------------------------------+
-| H~0~:     | Die Verteilung der Geschlechter unterscheidet sich *nicht* von der erwarteten Verteilung  |
+| H 0 :     | Die Verteilung der Geschlechter unterscheidet sich nicht von der erwarteten Verteilung  |
 +-----------+-------------------------------------------------------------------------------------------+
-| H~A~:     | Die Verteilung der Geschlechter unterscheidet sich von der erwarteten Verteilung          |
+| H A :     | Die Verteilung der Geschlechter unterscheidet sich von der erwarteten Verteilung          |
 +-----------+-------------------------------------------------------------------------------------------+
 
 
@@ -254,7 +254,7 @@ chisq.test(na.omit(fragebogen$sex))
 
 ## Die abhängige Variable
 
-Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde und lautet: "Ausmaß der Fremdenfeindlichkeit". Zur Messung der AV wurde den Studierenden eine Likertskala mit 10 Items vorgelegt. Die Antwortmöglichkeiten waren auf einer 6-stufigen Intervallskala mit den Ausprägungen "Stimme sehr zu" bis "Stimme gar nicht zu" vorgegeben. Die Frage lautete "Wie ist deine Meinung zur Migration?" (siehe im Anhang Frage 6 im Fragebogen). 
+Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde und lautet: "Ausmass der Fremdenfeindlichkeit". Zur Messung der AV wurde den Studierenden eine Likertskala mit 10 Items vorgelegt. Die Antwortmöglichkeiten waren auf einer 6-stufigen Intervallskala mit den Ausprägungen "Stimme sehr zu" bis "Stimme gar nicht zu" vorgegeben. Die Frage lautete "Wie ist deine Meinung zur Migration?" (siehe im Anhang Frage 6 im Fragebogen). 
 
 
 +-----------+------------------------------------------------------------------------------------------------------------------+
@@ -262,21 +262,21 @@ Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde und lautet:
 +===========+==================================================================================================================+
 | heimat    | Wenn Arbeitsplätze knapp werden, sollte man AusländerInnen wieder in Ihre Heimat schicken                        |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| rechte    | AusländerInnen sollten nicht die gleichen Rechte in allen Lebensbereichen haben wie ÖsterreicherInnen            |
+| rechte    | AusländerInnen sollten nicht die gleichen Rechte in allen Lebensbereichen haben wie österreicherInnen            |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| kultur    | Ich bin nicht für die Anwesenheit von AusländerInnen weil sie unsere Kultur negativ beeinflußen                  |
+| kultur    | Ich bin nicht für die Anwesenheit von AusländerInnen weil sie unsere Kultur negativ beeinflussen                  |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| verlassen | Es wäre am besten, wenn alle AusländerInnen Österreich verlassen würden                                          |
+| verlassen | Es wäre am besten, wenn alle AusländerInnen österreich verlassen würden                                          |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| partner   | In Österreich lebende AusländerInnen sollen sich Ihre (Ehe-)partner unter ihren eigenen Landsleuten wählen       |
+| partner   | In österreich lebende AusländerInnen sollen sich Ihre (Ehe-)partner unter ihren eigenen Landsleuten wählen       |
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | knapp     | Wenn Studierendenplätze an der WU noch knapper werden, sollte man bei der Zulassung InländerInnen bevorzugen     |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| pflegen   | AusländerInnen sollen ihre Kultur nicht bei uns pflegen, sie sollen sich an die Kultur in Österreich anpassen    |
+| pflegen   | AusländerInnen sollen ihre Kultur nicht bei uns pflegen, sie sollen sich an die Kultur in österreich anpassen    |
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | politik   | Politiker sollen sich vor allem für InländerInnen einsetzen                                                      |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| verdienen | AusländerInnen sollen sich nach dem Zuzug erstmal die Privilegien des Sozialstaates in Österreich (...)verdienen |
+| verdienen | AusländerInnen sollen sich nach dem Zuzug erstmal die Privilegien des Sozialstaates in österreich (...)verdienen |
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | egal      | Wenn ich mit AusländerInnen in einer Arbeitsgruppe bin, ist mir das nicht egal                                   |
 +-----------+------------------------------------------------------------------------------------------------------------------+
@@ -312,7 +312,7 @@ Die Teststatistik zeigt ein klares Ergebnis, da die Teststatistik einen p-Wert u
 ```{r Hauptkomponentenanalyse: KMO Kriterium}
 kmosmd <- KMOS(av)
 print(kmosmd, stats="KMO")
-print(kmosmd, stats="MSA", sort=TRUE, digits=3, show=1:5)
+print(kmosmd, stats="MSA", sort=TRü, digits=3, show=1:5)
 ```
 
 Der Wert des KMO liegt bei 0.8155905 und die MSA-Werte liegen bei > als 0,7. Die Daten sind also als sehr gut geeignet einzustufen weil genügend Informationen zur Durchführung einer Hauptkomponentenanalyse vorliegen. 
@@ -324,7 +324,7 @@ box(which="figure", lty="solid", col="black")
 
 Der Screeplot zeigt, dass die ersten 2 Komponenten einen Eigenwert > 1 haben, die anderen liegen unter diesem Kriterium. 
 
-Komponenten ergeben sich aus der Gruppierung von miteinander korrelierter Variablen wobei die Komponenten selbst miteinander nicht korrelieren. Die Größe des einzelnen Eigenwertes beschreibt den Anteil der Varianz in den Daten, die durch diese Komponente erklärt wird. Der Eigenwert wird durch die Anzahl der Items die zu einer Komponente zusammengefasst werden und der Korrelation innerhalb dieser Gruppe bestimmt. Je größer der Eigenwert desto mehr trägt er zur Erklärung der Gesamtstreuung bei. Komponenten mit einem Wert von 1 liefern den gleichen Erklärungswert wie die einzelne ursprüngliche Variable, darunter ist der Erklärungswert sogar geringer. 
+Komponenten ergeben sich aus der Gruppierung von miteinander korrelierter Variablen wobei die Komponenten selbst miteinander nicht korrelieren. Die Gründe des einzelnen Eigenwertes beschreibt den Anteil der Varianz in den Daten, die durch diese Komponente erklärt wird. Der Eigenwert wird durch die Anzahl der Items die zu einer Komponente zusammengefasst werden und der Korrelation innerhalb dieser Gruppe bestimmt. Je grösser der Eigenwert desto mehr trägt er zur Erklärung der Gesamtstreuung bei. Komponenten mit einem Wert von 1 liefern den gleichen Erklärungswert wie die einzelne ursprüngliche Variable, darunter ist der Erklärungswert sogar geringer. 
 
 ```{r Hauptkomponentenanalyse: Varianz}
 pca.av <- principal(av, 2, rotate="none")
@@ -336,7 +336,7 @@ Komponente PC1 erklärt 53% der Varianz und Komponente PC2 14%. Beide Komponente
 ```{r Hauptkomponentenanalyse }
 pca.av_r <- principal(av, 2)
 pca.av_r$criteria <- NULL
-print(pca.av_r, cut=0.43, sort=TRUE, digits=3)
+print(pca.av_r, cut=0.43, sort=TRü, digits=3)
 ```
 
 Es werden 2 Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die Komponenten mit den hoch ($\ge 0.43$) auf ihnen ladenden Variablen sind:
@@ -344,14 +344,14 @@ Es werden 2 Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die
 
 1. Komponente (RC1): moderate Einstellung (Eigenwert: 3.092, erklärte Varianz: 34,4%)
   "Bevorzugung von Inländern bei Knappheit von Studienplätzen"  .769
-  "Anpassung an Kultur in Österreich" .844
+  "Anpassung an Kultur in österreich" .844
   "Einsatz Politiker für Inländer"  .829
   "Verdienst Privilegien Sozialstaat" .765
 2. Komponente (RC2): aggressive Einstellung (Eigenwert: 2.972, erklärte Varianz: 32,5%)
   "Wieder in die Heimat schicken" .769
-  "Nicht die gleichen Rechte wie Österreicher"  .662
+  "Nicht die gleichen Rechte wie österreicher"  .662
   "Negative Beeinflussung Kultur" .794
-  "Österreich verlassen"  .901
+  "österreich verlassen"  .901
   "Ehepartner unter eigenen Landsleuten"  .431
 
 
@@ -365,7 +365,7 @@ box(which="figure", lty="solid", col="black")
 ```{r barplot var rechte }
 countr <- table(fragebogen$rechte)
 rownames(countr) <- c("1", "2", "3", "4", "5", "6")
-barplot(countr, main="Variable 'rechte'", ylim=c(0,60), xlab="Item: AusländerInnen sollten nicht die gleichen Rechte \n in allen Lebensbereichen haben wie ÖsterreicherInnen", ylab="Anzahl")
+barplot(countr, main="Variable 'rechte'", ylim=c(0,60), xlab="Item: AusländerInnen sollten nicht die gleichen Rechte \n in allen Lebensbereichen haben wie österreicherInnen", ylab="Anzahl")
 box(which="figure", lty="solid", col="black")
 ```
 
@@ -391,15 +391,658 @@ In der weiteren Analyse wird mit zwei metrischen Variablen weitergearbeitet.
 ## Hypothese 2
 
 ## Hypothese 3
+### Problemanalyse
+In diesem Abschnitt wollen wir überprüfen, ob die Einstellung der Studierenden abhängig von der Einstellung der Personen in Ihrem sozialen Umfeld ist.
 
+Unsere Hypothese dazu latüt:
+*Je mehr Menschen im persönlichen Umfeld (Freunde, Familie) ausländerfeindlich sind, umso negativer ist die eigene Haltung gegenüber AusländerInnen.*
+
+#### Welche Variablen kommen vor?
+Erklärende Variable: Umfeld  
+   
+Besteht aus neun Items; --> metrisch
+     
+Responsevariable: Fremdenfeindlichkeit  
+    
+Wurde bereits im Kapitel x behandelt; Die Ergebnisse werden für die Analyse weiterverwendet 
+     
+   - av_r.scores$moderat, Fremdenfeindlichkeit "moderat"", metrisch
+      
+   - av_r.scores$aggressiv, Fremdenfeindlichkeit "aggressiv", metrisch
+
+  
+  
+
+
+#### Welche Methode ist angebracht?
+t-Test
+
+#### Welche Hypothesen können formuliert werden?
+
++-----------+---------------------------------------------------------------------------+
+| H0:       |   Die eigene Einstellung zu MigratenInnen ist unabhängig von der Einstellung der Personen im eigenen Umfeld.               |
++-----------+---------------------------------------------------------------------------+
+| HA:       |   Die eigene Einstellung zu MigratenInnen ist abhängig von der Einstellung der Personen im eigenen Umfeld.                  |
++-----------+---------------------------------------------------------------------------+
+
+#### Die unabhängige Variable - Umfeld
+
++-----------+------------------------------------------------------------------------------------------------------------------+
+| Variablen | Item                                                                                                             |
++===========+==================================================================================================================+
+| diskut    | Ich diskutiere mit meinen Familienmitgliedern/Freunden oft über AusländerInnen                                       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| scherzen  | Ich kenne Familienmitglieder/Freunde, die oft über AusländerInnen im negativen Sinne scherzen            |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| erfahrung | Einige meiner Familienmitglieder/Freunde haben bereits negative Erfahrungen mit AusländerInnen gemacht                       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| demo      | Ich würde einigen meiner Familienmitglieder/Freunde zutraün, dass Sie bei Demonstrationen gegen AusländerInnen teilnehmen                                          |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| gewalt    | Heutzutage muss man Verständnis haben, wenn Familienmitglieder/Freunde Gewalt gegen AusländerInnen ausüben müssen       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| krimi     | Ich kenne Familienmitglieder/Freunde, die AusländerInnen für Kriminelle halten     |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| fpö      | Ich kenne Familienmitglieder/Freunde, die FPÖ wählen        |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| sicherheit| Seit der Flüchtlingskrise haben einige meiner Familienmitglieder/Freunde Angst um Ihre eigene Sicherheit                                                      |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| feindlich | Ich kenne Familienmitglieder/Freunde,die fremdenfeindlich sind |
++-----------+------------------------------------------------------------------------------------------------------------------+
+
+\begin{center}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Unabhängige Variable: Umfeld}
+\bigskip
+\end{center}
+
+### Kurzbericht
+
+Die Einstellung der Personen im sozialen Umfeld wurde anhand von neun Items überprüft. 
+Die übergerordente Frage dazu lautet: "Einstellung zur Migration in deinem sozialen Umfeld?" 
+Als Maßstab wurde eine Intervallskala von eins bis sechs verwendet, wobei 1 = "Trifft sehr zu" und 6 = "Trifft gar nicht zu".  
+
+Da wir hier mit multivairate Datean zu tun haben, wird eine Hauptkomponentenanalyse durchtgeführt, um die Datendimension zu reduzieren.  
+
+#### Voraussetzungen für die Hauptkomponentenanalyse
+
+Bevor wir die Voraussetzungen überprüfen, müssen wir die richtigen Daten auswählen. Wir werden alle Daten mit NAs entfernen und schaün uns das Ergebniss an. 
+
+```{r Umfeld: Daten überprüfen}
+library("psych")
+library("zoo")
+umfeld<-na.omit((fragebogen[,19:27]))
+nrow(umfeld)
+```
+  
+Wenn wir für die  ausgewählten Items alle Zeilen wo mindestens ein NA vorkommt entfernen, dann bleiben uns in Summe nur noch 94 Datensätze übrig. An erster Stelle ist es natürlich Schade, Datensätze wegen ein bis zwei NA zu entfernen. Aber wir erinnern uns zurück, dass wir für die abhängige Variable "Fremdenfeindlichkeit" 99 Datensätze verwendet haben.  
+
+Damit wir gleich vielen Daten für die abhängige- und unabhängige Variable verwenden können, werden wir die Rohdaten wieder hernehmen und fehlende Einträge mit der *na.approx*-Funktion ergänzen. Und danach die Datensätze mit der "!is.na"-Funktion auf jene Daten reduziert, die in der Variable "Heimat", welche im Datensatz der Hautpkomponentenanalyse der "Fremdenfeindlichkeit" vorkommt.
+
+```{r Umfeld: Daten laden}
+library("psych")
+library("zoo")
+umfeld<-na.approx(fragebogen[,19:27])
+umfeld<-umfeld[!is.na(av["heimat"]),]
+nrow(umfeld)
+```
+   
+Jetzt haben wir exakt 99 Datensätze, die mit der abhängigen Varialbe "Fremdenfeindlichkeit" übereintimmen.  
+
+##### Bartlett-Test: "Umfeld"
+
+Nachdem unser Datensatz für die weitere Bearbeitung dementsprechend vorbereitet wuden, können wir nun mit der überprüfung der Voraussetzungen für die Hauptkomponentenanalyse loslegen.  
+
+Als Erstes führen wir den Bartlett-Test durch: 
+```{r Umfeld: Bartlett-Test}
+library("REdaS")
+bart_spher(umfeld)
+```
+
+
+Die Teststatistik zeigt ein klares Ergebnis, da die Teststatistik $X^2=312.309$ mit einer $\chi^2$-Verteilung mit 36 Freiheitsgraden einen p-Wert unter 0.00000000000000022 erzeugt. Je kleiner der p-Wert ist, desto mehr Grund gibt es, die Nullhypothese zu verwerfen. Die Nullhypothese, dass es keine Korrelationen zwischen den Variablen gibt kann verworfen werden und das Resultat daher als statistisch signifikant bezeichnet werden.  
+       
+##### KMO und MSA: "Umfeld" 
+Als nüchstes werden wir die MSAs und die KMO überprüfen.
+```{r Umfeld: KMO Kriterium}
+kmosmd <- KMOS(umfeld)
+print(kmosmd, stats="KMO")
+print(kmosmd, stats="MSA", sort=TRü, digits=3, show=1:5)
+```
+
+Der Wert des KMO liegt bei 0.8040357 und die MSA-Werte liegen bei > als 0,6. Die Daten sind also als sehr gut geeignet einzustufen weil genügend Informationen zur Durchführung einer Hauptkomponentenanalyse vorliegen. 
+
+##### Scree Plot: Umfeld
+Mittels Scree Plot können wir nun überprüfen, wieviele Hauptkomponenten für die Hauptkomponentennalyse benötigt werden.
+  
+```{r Umfeld: Scree plot}
+VSS.scree(umfeld)
+box(which="figure", lty="solid", col="black")
+```
+
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Scree Plot:Umfeld}
+\bigskip
+\end{center}
+
+Der Screeplot zeigt, dass die ersten 2 Komponenten einen Eigenwert > 1 haben, die anderen liegen unter diesem Kriterium.   
+
+##### Hauptkomponentenanalyse: "Umfeld"
+Basierend auf der Information aus dem Screeplot werden wir im ersten Versuch zwei Komponenten extrahieren und vorerst keine Rotation durchführen. Um den Output zu reduzieren, wird die Objektkomponente *criteria* entfernt. 
+  
+```{r Umfeld: pca}
+pca.umfeld <- principal(umfeld, 2, rotate="none")
+pca.umfeld$criteria<-NULL
+pca.umfeld
+```
+  
+Komponente PC1 erklärt 45% der Varianz und Komponente PC2 12%. Beide Komponenten zusammen erklären 57% und sind > 1. Die Hinzunahme weiterer Variablen ist nicht sinnvoll weil alle weiteren Eigenwerte kleiner als 1 sind. 
+
+##### Varimax-Rotation: Umfeld
+
+Es werden zwei Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. 
+  
+```{r Hauptkomponentenanalyse - Umfeld }
+pca.umfeld_r <- principal(umfeld, 2)
+pca.umfeld_r$criteria <- NULL
+print(pca.umfeld_r, cut=0.48, sort=TRü, digits=3)
+```
+
+Es werden zwei Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die Komponenten mit den hoch ($\ge 0.48$) auf ihnen ladenden Variablen sind:
+
+
+1. Komponente (RC1): Passives Umfeld (Eigenwert: 2.761, erklärte Varianz: 30,7%)
+  "Angst um die eigene Sicherheit"  .834
+  "Fremdenfeindliche Personen im Umfeld" .756
+  "Bereits negative Erfahrung mit AusländerInnen"  .694
+  "FPÖ-Wähler im Umfeld" .624
+2. Komponente (RC2): Aktives Umfeld (Eigenwert: 2.396, erklärte Varianz: 26,6%)
+  "Gewalt ausüben" .8
+  "Bei Demosnstrationen gegen AusländerInnen teilnehmen"  .664
+  "AuländerInnen für Kriminelle halten" .642
+  "über AusländerInnen scherzen"  .558
+  "über AusländerInnen diskutieren"  .481
+
+##### Zuordnung der Items: "Umfeld"
+Als nüchstes schaün wir uns die Ergebnisse grafisch an.
+   
+```{r Umfeld PCA: diagram}
+fa.diagram(pca.umfeld_r, cut=0.43, cex=0.8, rsize=0.5, main="")
+box(which="figure", lty="solid", col="black")
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Fa-Diagram: Umfeld}
+\bigskip
+\end{center}
+  
+Anhand der durchwegs positiven Ladungen kann man erkennen, dass Personen mit hohen Werten bei den jeweiligen Items auch hohe Auspr?gungen auf der Komponente haben. Die zwei extrahierten Hauptkomponenten sind direkt interpretierbar als "aktives-" und "passives Umfeld". Menschen die bereit sind Gewalt gegen AusländerInnen auszuüben, bei Demonstrationen teilzunehmen, über Ausländer scherzen und diskutieren oder diese für Kriminelle halten, befinden sich auf der aktiven Seiten.
+
+##### Factor Scores: "Umfeld"
+für die weitere Analyse werden factor scores angelegt. 
+
+```{r Umfeld: factor scores}
+round(head(pca.umfeld_r$scores), 4)
+umfeld_r.scores <- data.frame(pca.umfeld_r$scores)
+names(umfeld_r.scores) <- c("passiv", "aktiv")
+round(head(umfeld_r.scores), 4)
+
+# Weitere Analyse mit den folgenden beiden Variablen:
+umfeld_r.scores$passiv
+umfeld_r.scores$aktiv
+```
+
+#### überprüfung der Hypothesen
+In der weiteren Analyse wird mit vier metrischen Variablen weitergearbeitet. 
+     
+Responsevariable "Fremdenfeindlichkeit": Moderat und Aggressiv   
+   
+Erklärende Variable "Umfeld": Aktiv und Passiv
+    
+Mittels linearen Regressionsmodells sollen die Responsevariablen durch die erklärende Variablen beschreiben werden. Ein Streudiagramm ist eine geeignete Variante, um den Zusammenhang bildhaft überprüfen zu können.
+    
+##### Moderat und Passiv
+In diesem Streudiagramm ist die Responsebariable (Moderat) auf der y-Achse und die erklärende Variable (Passiv) auf der x-Achse. Anhand der *lm()*-Funktion erfolgt die Schätzung des Modells. Die Schätzung kann für zwei Zwecke verwendet werden. Als erstes benötigen wir sie, um eine Gerade im Streudiagrmam mit der Funkton *abline()* einzeichnen zu können. Und später können wir die Ergebnisse für den *t-test für den Regressionsköffizienten* verwenden. 
+
+```{r boxplot: moderat - Passiv}
+mopa<-lm(av_r.scores$moderat ~ umfeld_r.scores$passiv)
+plot(umfeld_r.scores$passiv, av_r.scores$moderat, xlab="Passiv", ylab="Moderat")
+abline(mopa)
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Boxplot: Moderat und Passiv}
+\bigskip
+\end{center}  
+
+Nachdem das Steudiagramm nicht eindeutig ist, führen wir im nüchsten Schritt einen *t-test* durch. 
+  
+##### T-test: Moderat und Passiv  
+Die Schätzung haben wir bereits ausgerechnent, und können mit *summary()* ausgeben.
+
+```{r t-test: moderat - Passiv}
+summary(mopa)
+```
+  
+Die Schätzung für die Regressionsgleichung ergibt einen Anstieg der Regressionsgeraden von 0.3338. Der t-Test für diesen Regressionsköffizienten ist hoch signifikant (p<0.005). Die Nullhypothese wird beibehalten.
+    
+     
+Im Prinzip wird für die nachfolgenden Variablen immer dieselbe Methodik verwendet. Daher wird nur noch der T-Test analysiert.  
+  
+##### Boxplot: Moderat und Aktiv
+```{r boxplot: moderat - Aktiv}
+moak<-lm(av_r.scores$moderat ~ umfeld_r.scores$aktiv)
+plot(umfeld_r.scores$aktiv, av_r.scores$moderat, xlab="Aktiv", ylab="Moderat")
+abline(moak)
+
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Boxplot: Moderat und Aktiv}
+\bigskip
+\end{center}  
+##### T-Tet: Moderat und Aktiv  
+  
+```{r t-test: moderat - Aktiv}
+summary(moak)
+```
+  
+Die Schätzung für die Regressionsgleichung ergibt einen Anstieg der Regressionsgeraden von 0.1703. Der t-Test für diesen Regressionsköffizienten ist nicht signifikant (p>0.005). Die Nullhypothese wird verworfen.  
+  
+  
+```{r boxplot: Aggressiv - Passiv}
+agpa<-lm(av_r.scores$aggressiv ~ umfeld_r.scores$passiv)
+plot(umfeld_r.scores$passiv, av_r.scores$aggresiv, xlab="Passiv", ylab="Aggresiv")
+abline(agpa)
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Boxplot: Aggressiv und Passiv}
+\bigskip
+\end{center}
+  
+##### T-Tet: Aggressiv und Passiv  
+```{r t-test: Aggressiv - Passiv}
+summary(agpa)
+```
+  
+Die Schätzung für die Regressionsgleichung ergibt einen Anstieg der Regressionsgeraden von 0.1202. Der t-Test für diesen Regressionsköffizienten ist nicht signifikant (p<0.236). Die Nullhypothese wird verworfen.  
+  
+  
+```{r boxplot: Aggressiv - Aktiv}
+agak<-lm(av_r.scores$aggressiv ~ umfeld_r.scores$aktiv)
+plot(umfeld_r.scores$aktiv, av_r.scores$aggressiv, xlab="Aktiv", ylab="Aggresiv")
+abline(agak)
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Boxplot: Aggressiv und Aktiv}
+\bigskip
+\end{center}
+  
+##### T-Tet: Aggressiv und Aktiv  
+  
+```{r t-test: Aggressiv - Aktiv}
+summary(mopa)
+```
+  
+Die Schätzung für die Regressionsgleichung ergibt einen Anstieg der Regressionsgeraden von 0.377. Der t-Test für diesen Regressionsköffizienten ist hoch signifikant (p<0.005). Die Nullhypothese wird beibehalten.  
+  
+  
+ 
 ## Hypothese 4
+
+### Problemanalyse
+
+*Je höher die Zufriedenheit der Studenten mit der Diversität der Studierenden auf der Wirtschafts- univiersität, umso positiver die eigene Haltung gegenüber AusländerInnen.*
+
+#### Welche Variablen kommen vor?
+  
+Zufriedenheit mit der WU Wien, 
+    
+Erklärende Variable: Zufriedenheit mit der WU Wien --> kategorial
+   
+Responsevariable: Fremdenfeindlichkeit
+    
+  - av_r.scores$moderat, Fremdenfeindlichkeit moderat, metrisch  
+       
+  - av_r.scores$aggressiv, Fremdenfeindlichkeit stark, metrisch
+
+#### Welche Methode ist angebracht?
+Unabhängigkeitstest
+
+#### Welche Hypothesen können formuliert werden?
+
++-----------+---------------------------------------------------------------------------+
+| H0:       |   Die Fremdenfeindlichkeit ist unabhängig von der Zufriedenheit auf der Wu. |
++-----------+---------------------------------------------------------------------------+
+| HA:       |   Die Fremdenfeindlichkeit ist abhängig von der Zufriedenheit auf der Wu.   |
++-----------+---------------------------------------------------------------------------+
+
+#### Die unabhängige Variable - Wu 
+
++-----------+------------------------------------------------------------------------------------------------------------------+
+| Variable  | Item                                                                                                             |
++===========+==================================================================================================================+
+| wu        | Wie zufrieden bist du mit dem multikulturellen Umfeld auf der WU Wien?                       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+
+### Kurzbericht
+
+#### Zufriedenheit mit der WU 
+Die Zufriedenheit der Studierenden mit dem multikulturellen Umfeld auf der Wirtschaftsuniversität Wien wurde anhand eines einzigen Items gemessen.   
+Die Formlierung des Items lautet: "Wie zufrieden bist du mit dem multikulturellen Umfeld auf der WU Wien?"    
+Als Maßstab wurde eine Intervallskala von eins bis sechs verwendet, wobei 1 = sehr zufrieden und 6 = nicht zufrieden.
+
+##### Balkendiagramm: Zufriedenheit
+Zürst schaün wir uns die Daten mit Hilfe eines Balkendiagramms an.  
+  
+```{r barplot var wu }
+countr <- table(fragebogen$wu)
+rownames(countr) <- c("1", "2", "3", "4", "5")
+barplot(countr, main="Variable 'wu'", ylim=c(0,60), xlab="Item: Wie zufrieden bist du mit dem multikulturellen Umfeld auf der WU Wien", ylab="Anzahl")
+box(which="figure", lty="solid", col="black")
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Barplot: Zufriedenheit - WU}
+\bigskip
+\end{center}
+  
+Wie man aus der Grafik ablesen kann, ist erstaunlicherweise niemand völlig unzufrieden mit dem multikulturellen Umfeld auf der Wirtschaftsuniversität Wien. Keine einzige Person hat eine "sechs" ankreuzt. Grundsötzlich sieht man auch, dass die meisten Studierenden zufrieden mit dem multikulturellen Umfeld auf der WU Wien sind.  
+  
+Um die Hypothesen zu überprüfen, wollen wie zunüchst  die Daten mittels Boxplot darstellen.
+Im ersten Boxplot wird die Komponente "Moderat" überprüft. 
+  
+#### überprüfung der Hypothesen
+Die Ergebnisse der unabhängigen Variable, die wir im Abschnitt 4.3 bereits ausgewertet haben, werden wir für die weitere Analyse verwenden. Wir erinnern uns zurück, dass wir zwei Komponente haben: *Moderat* und *Aggressiv*
+  
+##### Boxplot: Moderat und WU
+Um die Fragestellung, ob Fremdenfeindlichkeit mit der Zufriedeheit mit dem multikulturellen Umfeld zusammenhängt, schaün wir uns die Ergebnisse mittels Boxplot an
+  
+```{r boxplot: moderat - wu}
+boxplot(av_r.scores$moderat ~ fragebogen$wu)
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Boxplot: Moderat und WU}
+\bigskip
+\end{center}
+
+Mittels *describeBy()*-Funktion können wir uns auch eine numerische Beschreibung der Daten ansehen, die prinzipell unterstützdend für die Interpretation des Boxplots verwendet werden kann.
+  
+```{r describeBy: moderat - wu}
+describeBy(av_r.scores$moderat, fragebogen$wu, skew=FALSE)
+```
+
+Die Ergebnisse des Boxplots lassen sich schwer interpretieren. Man sieht, dass die ersten drei Gruppen ziemlich ident sind. Die Gruppe vier weist die hüchsten Werte auf, während die Gruppe fünf die niedrigsten Werte aufweist. Daher werden wir weitere Tests durchführen.
+
+##### Bartlet test
+Mit diesem Test werden wir überprüfen, ob die Varianzen in den Gruppen gleich sind.  
+  
+```{r bartlett test: moderat - wu}
+bartlett.test(av_r.scores$moderat~fragebogen$wu)
+```  
+Der p-Wert ist >0.01 und daher nicht signifikant. Nun können wir weitere Tests durchführen. 
+
+
+##### $\chi^2$-Unabhängigkeitstest
+Nachdem wir herausinden möchten, ob eine abhängigkeit zwischen der Zufridenheit mit dem multikulturellen Umfeld auf der WU und Fremdenfeindlichkeit besteht, werden wir einen $\chi^2$-Unabhängigkeitstest durchführen.
+
+```{r Chisq.test: moderat - wu}
+chisq.test(av_r.scores$moderat,fragebogen$wu)
+```
+   
+Die Nullhypothese kann nicht verworfen werden. P-Wert ist 0.7784 und grsser als 0.05. Die Fremdenfeindlichkeit hängt nicht von der Zufriedenheit der Studierenden mit dem multikulturellen Umfeld auf der Wu ab.
+
+##### Boxplot: Aggressiv und WU
+Im Zweiten Boxplot wird die Komponente "Aggressiv" überprüft.
+  
+```{r boxplot: aggresiv - wu}
+boxplot(av_r.scores$aggressiv ~ fragebogen$wu)
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Boxplot: Aggressiv und Passiv}
+\bigskip
+\end{center}
+  
+Mittels describeBy()-Funktion können wir uns auch eine numerische Beschreibung der Daten ansehen, die
+prinzipell unterstützdend für die Interpretation des Boxplots verwendet werden kann.  
+  
+```{r describeBy: aggressiv - wu}
+describeBy(av_r.scores$aggressiv, fragebogen$wu, skew=FALSE)
+```
+  
+Die Ergebnisse des Boxplots lassen sich schwer interpretieren. Man sieht, dass die Ergbenisse keiner logischen Verteilung unterliegen. Wähend die erste Gruppe hochen Werte aufweist, sind die Gruppen zwei und drei absteigend. Gruppe vier wieder hoch und und die letzte Gruppe wieder niedrig.
+  
+Daher werden wir weitere Tests durchführen.
+  
+
+##### Bartlet test
+Mit diesem Test werden wir überprüfen, ob die Varianzen in den Gruppen gleich sind.
+  
+```{r bartlett test: aggressiv - wu}
+bartlett.test(av_r.scores$aggressiv~fragebogen$wu)
+```
+
+Der p-Wert ist >0.01 und daher nicht signifikant. Nun können wir weitere Tests durchführen
+  
+##### $\chi^2$-Unabhängigkeitstest
+
+Nachdem wir herausinden möchten, ob eine abhängigkeit zwischen der Zufridenheit mit der Wu und Fremdenfeindlichkeit besteht, werden wir einen $\chi^2$-Unabhängigkeitstest durchführen.
+  
+```{r Chisq.test: aggresiv - wu}
+chisq.test(av_r.scores$aggressiv,fragebogen$wu)
+```
+  
+Die Nullhypothese kann nicht verworfen werden. P-Wert ist 0.7784 und grsser als 0.05. Die Fremdenfeindlichkeit hängt nicht von der Zufriedenheit der Studierenden mit dem multikulturellen Umfeld auf der WU ab.
 
 ## Hypothese 5
 
+### Problemanalyse
+In diesem Abschnitt wollen wir überprüfen, ob die Einstellung der Studierenden gegenüber AusländerInnen abhängig vom Kontakt zu ausländischen Personen ist.
+
+Unsere Hypothese dazu latüt:
+*Je mehr Kontakt Studenten zu ausländischen Mitbürgern haben, desto besser sind die Einstellungen Ausländern gegenüber.*
+
+#### Welche Variablen kommen vor?
+Erklärende Variable: Kontakt zu Ausländern
+  
+  - Likertskala mit 5 Items;
+
+  - Ordinalskala mit einem Item;
+
+   
+Responsevariable: Fremdenfeindlichkeit  
+    
+Wurde bereits im Kapitel x behandelt; Die Ergebnisse werden für diese Analyse weiterverwendet 
+     
+   - av_r.scores$moderat, Fremdenfeindlichkeit "moderat"", metrisch
+      
+   - av_r.scores$aggressiv, Fremdenfeindlichkeit "aggressiv", metrisch
+
+  
+  
+
+
+#### Welche Methode ist angebracht?
+t-Test; Unabhängigkeitstest
+
+#### Welche Hypothesen können formuliert werden?
++-----------+------------------------------------------------------------------------------------------------------------------+
+| H0        | Die eigene Einstellung zu MigratenInnen ist unabhängig von Kontakt zu ausländischen Personen.             |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| HA        | Die eigene Einstellung zu MigratenInnen ist abhängig von Kontakt zu ausländischen Personen.                  |
++-----------+------------------------------------------------------------------------------------------------------------------+
+  
++-----------+------------------------------------------------------------------------------------------------------------------+
+| H0        | Die eigene Einstellung zu MigratenInnen ist unabhängig von der Anzahl ausländischer Freunde.             |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| HA        | Die eigene Einstellung zu MigratenInnen ist abhängig von der Anzahl ausländischer Freunde.                  |
++-----------+------------------------------------------------------------------------------------------------------------------+
+
+  
+
+#### Die unabhängige Variable - Kontakt zu Ausländern
+
++-----------+------------------------------------------------------------------------------------------------------------------+
+| Variablen | Item                                                                                                             |
++===========+==================================================================================================================+
+| arbeiten  | Ich arbeite oft mit AusländerInnen zusammen                                       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| skype     | Ich skype oft mit Freunden in anderen ländern            |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| treffen   | Ich treffe oft Freunde, viele davon sind AusländerInnen                  |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| engag     | Ich engagiere mich in einem Verein um AusländerInnen besser zu integrieren (z.B. Fussballclub)                                          |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| lv        | In Lehrveranstaltungen auf der Uni habe ich oft mit ausländischen Studierenden zusammengearbeitet       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+  
+#### Die unabhängige Variable - Anzahl ausländischer Freunde
+
++-----------+------------------------------------------------------------------------------------------------------------------+
+| Variablen | Item                                                                                                             |
++===========+==================================================================================================================+
+| kreis     | Wieviele AusländerInnen gibt es in deinem engeren Freundeskreis?                                       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+
+##### Balkendiagramm: Anzahl ausländischer Feunde
+Zürst schaün wir uns die Daten mit Hilfe eines Balkendiagramms an.  
+  
+```{r barplot var Kreis }
+countr <- table(fragebogen$kreis)
+rownames(countr) <- c("0-1", "2-3", "4-5", "6-7", "8-9", ">10")
+barplot(countr, main="Anzahl ausländischer Freunde", ylim=c(0,60), xlab="Item: wieviele AusländerInnen gibt es in deinem engeren Freundeskreisö", ylab="Anzahl")
+box(which="figure", lty="solid", col="black")
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Barplot: ausländische Freunde}
+\bigskip
+\end{center}
+  
+Aus dem Balkendiagramm können wir erkennen, dass knapp 6% der Befragen nur 0-1 ausländische Freunde haben. Alleine, dass die Meisten mehr als zwei ausländische Freunde haben, ist es ein zeichen für einen multikulturellen Umfeld auf der Wu-Wien. Hinzu kommt noch, dass über 40% der Befragten mehr als 10 angekreuzt haben.        
+
+### Kurzbericht
+
+Die Einstellung der Personen im sozialen Umfeld wurde anhand von neun Items überprüft. 
+Die übergerordente Frage dazu lautet: "Einstellung zur Migration in deinem sozialen Umfeld?" 
+Als Maßstab wurde eine Intervallskala von eins bis sechs verwendet, wobei 1 = "Trifft sehr zu" und 6 = "Trifft gar nicht zu".  
+
+Da wir hier mit multivairate Datean zu tun haben, wird eine Hauptkomponentenanalyse durchtgeführt, um die Datendimension zu reduzieren.  
+
+#### Voraussetzungen für die Hauptkomponentenanalyse
+
+Bevor wir die Voraussetzungen überprüfen, müssen wir die richtigen Daten auswählen. Wir werden alle Daten mit NAs entfernen und schaün uns das Ergebniss an. 
+
+```{r Kontakt: Daten überprüfen}
+library("psych")
+library("zoo")
+kontakt<-na.omit((fragebogen[,29:33]))
+nrow(kontakt)
+kontakt
+```
+  
+Wenn wir für die  ausgewählten Items alle Zeilen wo mindestens ein NA vorkommt entfernen, dann bleiben uns in Summe nur noch 94 Datensätze übrig. An erster Stelle ist es natürlich Schade, Datensätze wegen ein bis zwei NA zu entfernen. Aber wir erinnern uns zurück, dass wir für die abhängige Variable "Fremdenfeindlichkeit" 99 Datensätze verwendet haben.  
+
+Damit wir gleich vielen Daten für die abhängige- und unabhängige Variable verwenden können, werden wir die Rohdaten wieder hernehmen und fehlende Einräge mit der *na.approx*-Funktion ergänzen. Und danach die Datensätze mit der "!is.na"-Funktion auf jene Daten reduziert, die in der Variable "Heimat", welche im Datensatz der Hautpkomponentenanalyse der "Fremdenfeindlichkeit" vorkommt.
+
+```{r Kontakt: Daten laden}
+library("psych")
+library("zoo")
+kontakt<-kontakt[!is.na(av["heimat"]),]
+nrow(kontakt)
+```
+   
+Jetzt haben wir exakt 99 Datensätze, die mit der abhängigen Varialbe "Fremdenfeindlichkeit" übereintimmen.  
+
+##### Bartlett-Test: "Kontakt"
+
+Nachdem unser Datensatz für die weitere Bearbeitung dementsprechend vorbereitet wuden, können wir nun mit der überprüfung der Voraussetzungen für die Hauptkomponentenanalyse loslegen.  
+
+Als Erstes führen wir den Bartlett-Test durch: 
+```{r Umfeld: Bartlett-Test3}
+library("REdaS")
+bart_spher(kontakt)
+```
+
+
+Die Teststatistik zeigt ein klares Ergebnis, da die Teststatistik $X^2=312.309$ mit einer $\chi^2$-Verteilung mit 36 Freiheitsgraden einen p-Wert unter 0.00000000000000022 erzeugt. Je kleiner der p-Wert ist, desto mehr Grund gibt es, die Nullhypothese zu verwerfen. Die Nullhypothese, dass es keine Korrelationen zwischen den Variablen gibt kann verworfen werden und das Resultat daher als statistisch signifikant bezeichnet werden.  
+       
+##### KMO und MSA: "Kontakt" 
+Als nüchstes werden wir die MSAs und die KMO überprüfen.
+```{r Kontakt: KMO Kriterium}
+kmosmd <- KMOS(kontakt)
+print(kmosmd, stats="KMO")
+print(kmosmd, stats="MSA", sort=TRü, digits=3, show=1:5)
+```
+
+Der Wert des KMO liegt bei 0.8040357 und die MSA-Werte liegen bei > als 0,6. Die Daten sind also als sehr gut geeignet einzustufen weil genügend Informationen zur Durchführung einer Hauptkomponentenanalyse vorliegen. 
+
+##### Scree Plot: kontakt
+Mittels Scree Plot können wir nun überürfen, wieviele Hauptkomponenten für die Hauptkomponentennalyse benötigt werden.
+```{r Umfeld: Scree plot5}
+VSS.scree(kontakt)
+box(which="figure", lty="solid", col="black")
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Scree Plot:Umfeld}
+\bigskip
+\end{center}
+
+Der Screeplot zeigt, dass die ersten 2 Komponenten einen Eigenwert > 1 haben, die anderen liegen unter diesem Kriterium.   
+
+##### Hauptkomponentenanalyse: "Umfeld"
+Basierend auf der Information aus dem Screeplot werden wir im ersten Versuch zwei Komponenten extrahieren und vorerst keine Rotation durchführen. Um den Output zu reduzieren, wird die Objektkomponente *criteria* entfernt. 
+```{r Kontakt: pca}
+pca.kontakt <- principal(kontakt, 2, rotate="none")
+pca.kontakt$criteria<-NULL
+pca.kontakt
+```
+
+Komponente PC1 erklärt 45% der Varianz und Komponente PC2 12%. Beide Komponenten zusammen erklären 57% und sind > 1. Die Hinzunahme weiterer Variablen ist nicht sinnvoll weil alle weiteren Eigenwerte kleiner als 1 sind. 
+
+
+Es werden zwei Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die Komponenten mit den hoch ($\ge 0.48$) auf ihnen ladenden Variablen sind:
+
+
+1. Komponente (RC1): Passives Umfeld (Eigenwert: 2.761, erklärte Varianz: 30,7%)
+  "Angst um die eigene Sicherheit"  .834
+  "Fremdenfeindliche Personen im Umfeld" .756
+  "Bereits negative Erfahrung mit AusländerInnen"  .694
+  "FPÖ-Wähler im Umfeld" .624
+2. Komponente (RC2): Aktives Umfeld (Eigenwert: 2.396, erklärte Varianz: 26,6%)
+  "Gewalt ausüben" .8
+  "Bei Demosnstrationen gegen AusländerInnen teilnehmen"  .664
+  "AuländerInnen für Kriminelle halten" .642
+  "über AusländerInnen scherzen"  .558
+  "über AusländerInnen diskutieren"  .481
+
+##### Zuordnung der Items: "Kontakt"
+Als nüchstes schaün wir uns die Ergebnisse grafisch an.
+```{r Kontakt PCA: diagram}
+fa.diagram(pca.kontakt, cut=0.5, cex=0.8, rsize=0.5, main="")
+box(which="figure", lty="solid", col="black")
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Fa-Diagram: Kontakt}
+\bigskip
+\end{center}
+  
+Anhand der durchwegs positiven Ladungen kann man erkennen, dass Personen mit hohen Werten bei den jeweiligen Items auch hohe Ausprägungen auf der Komponente haben. Die zwei extrahierten Hauptkomponenten sind direkt interpretierbar als "aktives-" und "passives Umfeld". Menschen die bereit sind Gewalt gegen AusländerInnen auszuüben, bei Demonstrationen teilzunehmen, über Ausländer scherzen und diskutieren oder diese für Kriminelle halten, befinden sich auf der aktiven Seiten.
+
+##### Factor Scores: "Umfeld"
+für die weitere Analyse werden factor scores angelegt. 
+
+```{r Kontakt: factor scores}
+round(head(pca.kontakt$scores), 4)
+kontakt.scores <- data.frame(pca.kontakt$scores)
+names(kontakt.scores) <- c("kreis")
+round(head(kontakt.scores), 4)
+
+# Weitere Analyse mit den folgenden beiden Variablen:
+kontakt.scores$kreis
+```
+
+#### überprüfung der Hypothesen
+
+  
+  
 ## Hypothese 6
 
-"Männer sind fremdenfeindlicher als Frauen."
-Gibt es Unterschiede bei Fremdenfeindlichkeit zwischen FRauen und Männern?
+"Männer sind fremdenfeindlicher als Fraün."
+Gibt es Unterschiede bei Fremdenfeindlichkeit zwischen Fraün und Männern?
 
 ### Welche Variablen kommen vor?
   av_r.scores$moderat, Fremdenfeindlichkeit moderat, metrisch
@@ -415,9 +1058,9 @@ t-Test oder Mann-Whitney U-Test
 ### Welche Hypothesen können formuliert werden?
 
 +-----------+--------------------------------------------------------------------+
-| H~0~:     | Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich         |
+| H0:     | Die Fremdenfeindlichkeit ist bei Männern und Fraün gleich         |
 +-----------+--------------------------------------------------------------------+
-| H~A~:     | Die Fremdenfeindlichkeit unterscheidet sich bei Männern und Frauen |
+| HA:     | Die Fremdenfeindlichkeit unterscheidet sich bei Männern und Fraün |
 +-----------+--------------------------------------------------------------------+
 
 ### Kurzbericht
@@ -441,20 +1084,20 @@ densbox(av_r.scores$moderat ~ fragebogen$sex)
 bartlett.test(av_r.scores$moderat~fragebogen$sex)
 ```
 
-Bartlett-Test -> nicht signifikant (p-value = 0.8992) -> t-Test
+Bartlett-Test -> nicht signifikant (p-valü = 0.8992) -> t-Test
 
 
 ```{r t-test}
-t.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRUE)
+t.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRü)
 ```
 
 
-Nullhypothese kann nicht verworfen werden (p-value = 0.7747, größer als .05) -> Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich. 
+Nullhypothese kann nicht verworfen werden (p-valü = 0.7747, grösser als .05) -> Die Fremdenfeindlichkeit ist bei Männern und Fraün gleich. 
 
 \clearpage
 \section{Anhang}
 
-## Übersicht Datensatz
+## übersicht Datensatz
 
 Ausgabe der ersten 5 Zeilen: 
 
@@ -471,24 +1114,23 @@ kable(fragebogen[1:5,37:44])
 \bigskip
 \end{center}
 
-## Übersicht NA
+## übersicht NA
 
-```{r Übersicht NA: Liste}
+```{r übersicht NA: Liste}
 na_count <- sapply(fragebogen[-1,], function(y) sum(is.na(y)))
-kable(na_count, format="latex", digits=2, longtable=TRUE)
+kable(na_count, format="latex", digits=2, longtable=TRü)
 ```
 
 \begin{center}
-\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Übersicht der NA im Datensatz}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: übersicht der NA im Datensatz}
 \bigskip
 \end{center}
 
 
-```{r Übersicht NA: Sum}
+```{r übersicht NA: Sum}
 # Summe aller NA im Datensatz
 sum(is.na(fragebogen))
 ```
-
 \section{Referenzen}
 \appendix
 
