@@ -9,7 +9,7 @@ output:
     latex_engine: pdflatex
     #template: latex_template.tex
 title: "Zur Wahrnehmung und Einstellung von WU-Studierenden gegenüber Fremden"
-author: Boris T. Podzeit, Yasir Khan
+author: Boris Podzeit, Yasir Khan
 #keywords: ""
 #bibliography: literatur.bib
 #biblio-style: apsr
@@ -50,7 +50,7 @@ Abbildungsverzeichnis hierher
 
 ## Datenauszug
 
-Ein Auszug der Daten ist im Anhang zufinden
+Ein Auszug der Daten ist im Anhang zu finden
 ```{r Daten einlesen und summary}
 fragebogen <- read.csv("./data.csv")
 nrow(fragebogen)
@@ -59,7 +59,7 @@ nrow(fragebogen)
 
 ## Fragebogen
 
-Der Fragebogen ist im Anhang zufinden
+Der Fragebogen ist im Anhang zu finden
 
 
 \clearpage
@@ -67,7 +67,7 @@ Der Fragebogen ist im Anhang zufinden
 \section{Fremdenfeindlichkeit als Thema}
 
 ## Warum das Thema Fremdenfeindlichkeit?
-Fremdenfeindlichkeit und Migration ist besonders in den letzen beiden Jahren ein heiss diskutiertes Thema geworden. Die Gründe für Fremdenfeindlichkeit mögen auf den ersten Blick durch Zuwanderung und die damit einhergehende Änderung demographischer Verhältnisse verursacht worden sein, eine grosse Rolle spielt jedoch die Wahrnehmung von Fremden und die damit einhergehenden Gefühlslagen der Menschen. Diese Entwicklung macht es notwendig zu verstehen welche Faktoren für die Entstehung, Verbreitung und Verfestigung von Fremdenfeindlichkeit verantwortlich sind, denn Ausländer (auch Deutsche, Schweizer, ..) haben häufig mit Diskriminierung zu kämpfen. In demokratischen Staaten kann jedoch nur die Gleichberechtigung aller das Ziel sein und daher ist es notwendig, Mittel und Wege zu erforschen um ein besser integriertes Zusammenleben zu ermöglichen. 
+Fremdenfeindlichkeit und Migration ist besonders in den letzen beiden Jahren ein heiß diskutiertes Thema geworden. Die Gründe für Fremdenfeindlichkeit mögen auf den ersten Blick durch Zuwanderung und die damit einhergehende Änderung demographischer Verhältnisse verursacht worden sein, eine grosse Rolle spielt jedoch die Wahrnehmung von Fremden und die damit einhergehenden Gefühlslagen der Menschen. Diese Entwicklung macht es notwendig zu verstehen welche Faktoren für die Entstehung, Verbreitung und Verfestigung von Fremdenfeindlichkeit verantwortlich sind, denn Ausländer (auch Deutsche, Schweizer, ..) haben häufig mit Diskriminierung zu kämpfen. In demokratischen Staaten kann jedoch nur die Gleichberechtigung aller das Ziel sein und daher ist es notwendig, Mittel und Wege zu erforschen um ein besser integriertes Zusammenleben zu ermöglichen. 
 
 Mit dem Thema der Wahrnehmung von Fremden die Ursachen für die Entstehung von Stereotypen haben sich unzählige Arbeiten beschäftigt. Die Entstehung von Ängsten gegenüber Fremden wird von Stolz (2000) folgendermassen kategorisiert: 
 
@@ -224,8 +224,8 @@ Im demographischen Teil zum Schluss des Fragebogens wurde auf Fragen zu persönl
 
 ```{r barplot Geschlecht}
 sex_count <- table(fragebogen$sex)
-rownames(sex_count) <- c("männlich", "weiblich")
-barplot(sex_count, main="Geschlecht", ylim=c(0,70), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("lightblue", "mistyrose"))
+rownames(sex_count) <- c("weiblich", "männlich")
+barplot(sex_count, main="Geschlecht", ylim=c(0,70), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("mistyrose", "lightblue"))
 box(which="figure", lty="solid", col="black")
 ```
 
@@ -236,10 +236,10 @@ box(which="figure", lty="solid", col="black")
 
 ## Prüfung der Repräsentativität
 
-In Abbildung `r c_plots` ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen `r sex_count[1]` männliche Studierende und `r sex_count[2]` weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stichprobe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2015/16 insgesamt 21.157 Personen an der WU studiert haben.13 11.137 davon sind männliche und 10.020 sind weibliche Studieren- de. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2016/17 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Studierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Verteilung der Grundgesamtheit unterscheidet. Die beobachteten und erwarteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
+In Abbildung `r c_plots` ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen `r sex_count[2]` männliche Studierende und `r sex_count[1]` weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stichprobe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2015/16 insgesamt 21.842 Personen an der WU studiert haben. 11.558 davon sind männliche und 10.284 sind weibliche Studierende. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2016/17 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Studierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Verteilung der Grundgesamtheit unterscheidet. Die beobachteten und erwarteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
 
 +-----------+-------------------------------------------------------------------------------------------+
-| H~0~:     | Die Verteilung der Geschlechter unterscheidet sich *nicht* von der erwarteten Verteilung  |
+| H~0~:     | Die Verteilung der Geschlechter unterscheidet sich nicht von der erwarteten Verteilung    |
 +-----------+-------------------------------------------------------------------------------------------+
 | H~A~:     | Die Verteilung der Geschlechter unterscheidet sich von der erwarteten Verteilung          |
 +-----------+-------------------------------------------------------------------------------------------+
@@ -248,7 +248,8 @@ In Abbildung `r c_plots` ist die Verteilung der Befragten nach ihrem Geschlecht 
 Chi-Quadrat Test hierher
 
 ```{r Chi-Quadrat Test}
-chisq.test(na.omit(fragebogen$sex))
+#chisq.test(na.omit(fragebogen$sex))
+chisq.test(c(10.284,11.558),c(sex_count[1], sex_count[2]))
 ```
 
 
@@ -685,20 +686,17 @@ Die Schätzung für die Regressionsgleichung ergibt einen Anstieg der Regression
  
 ## Hypothese 4
 
-### Problemanalyse
 
 *Je höher die Zufriedenheit der Studenten mit der Diversität der Studierenden auf der Wirtschafts- univiersität, umso positiver die eigene Haltung gegenüber AusländerInnen.*
 
+### Problemanalyse
+
 #### Welche Variablen kommen vor?
-  
-Zufriedenheit mit der WU Wien, 
-    
+
 Erklärende Variable: Zufriedenheit mit der WU Wien --> kategorial
-   
 Responsevariable: Fremdenfeindlichkeit
     
   - av_r.scores$moderat, Fremdenfeindlichkeit moderat, metrisch  
-       
   - av_r.scores$aggressiv, Fremdenfeindlichkeit stark, metrisch
 
 #### Welche Methode ist angebracht?
@@ -707,12 +705,12 @@ Unabhängigkeitstest
 #### Welche Hypothesen können formuliert werden?
 
 +-----------+---------------------------------------------------------------------------+
-| H~0~:       |   Die Fremdenfeindlichkeit ist unabhängig von der Zufriedenheit auf der Wu. |
+| H~0~:       |   Die Fremdenfeindlichkeit ist unabhängig von der Zufriedenheit auf der WU. |
 +-----------+---------------------------------------------------------------------------+
-| H~A~:       |   Die Fremdenfeindlichkeit ist abhängig von der Zufriedenheit auf der Wu.   |
+| H~A~:       |   Die Fremdenfeindlichkeit ist abhängig von der Zufriedenheit auf der WU.   |
 +-----------+---------------------------------------------------------------------------+
 
-#### Die unabhängige Variable - Wu 
+#### Die unabhängige Variable - WU 
 
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | Variable  | Item                                                                                                             |
@@ -760,13 +758,13 @@ boxplot(av_r.scores$moderat ~ fragebogen$wu)
 \bigskip
 \end{center}
 
-Mittels *describeBy()*-Funktion können wir uns auch eine numerische Beschreibung der Daten ansehen, die prinzipell unterstützdend für die Interpretation des Boxplots verwendet werden kann.
+Mittels *describeBy()*-Funktion können wir uns auch eine numerische Beschreibung der Daten ansehen, die prinzipell unterstützend für die Interpretation des Boxplots verwendet werden kann.
   
 ```{r describeBy: moderat - wu}
 describeBy(av_r.scores$moderat, fragebogen$wu, skew=FALSE)
 ```
 
-Die Ergebnisse des Boxplots lassen sich schwer interpretieren. Man sieht, dass die ersten drei Gruppen ziemlich ident sind. Die Gruppe vier weist die hüchsten Werte auf, während die Gruppe fünf die niedrigsten Werte aufweist. Daher werden wir weitere Tests durchführen.
+Die Ergebnisse des Boxplots lassen sich schwer interpretieren. Man sieht, dass die ersten drei Gruppen ziemlich ident sind. Die Gruppe vier weist die höchsten Werte auf, während die Gruppe fünf die niedrigsten Werte aufweist. Daher werden wir weitere Tests durchführen.
 
 ##### Bartlet test
 Mit diesem Test werden wir überprüfen, ob die Varianzen in den Gruppen gleich sind.  
@@ -778,13 +776,13 @@ Der p-Wert ist >0.01 und daher nicht signifikant. Nun können wir weitere Tests 
 
 
 ##### $\chi^2$-Unabhängigkeitstest
-Nachdem wir herausinden möchten, ob eine abhängigkeit zwischen der Zufridenheit mit dem multikulturellen Umfeld auf der WU und Fremdenfeindlichkeit besteht, werden wir einen $\chi^2$-Unabhängigkeitstest durchführen.
+Nachdem wir herausfinden möchten, ob eine Abhängigkeit zwischen der Zufriedenheit mit dem multikulturellen Umfeld auf der WU und Fremdenfeindlichkeit besteht, werden wir einen $\chi^2$-Unabhängigkeitstest durchführen.
 
 ```{r Chisq.test: moderat - wu}
-chisq.test(av_r.scores$moderat,fragebogen$wu)
+chisq.test(av_r.scores$moderat, fragebogen$wu)
 ```
    
-Die Nullhypothese kann nicht verworfen werden. P-Wert ist 0.7784 und grsser als 0.05. Die Fremdenfeindlichkeit hängt nicht von der Zufriedenheit der Studierenden mit dem multikulturellen Umfeld auf der Wu ab.
+Die Nullhypothese wird beibehalten (p = 0.7784). Die Fremdenfeindlichkeit hängt nicht von der Zufriedenheit der Studierenden mit dem multikulturellen Umfeld auf der WU ab.
 
 ##### Boxplot: Aggressiv und WU
 Im Zweiten Boxplot wird die Komponente "Aggressiv" überprüft.
@@ -820,27 +818,26 @@ Der p-Wert ist >0.01 und daher nicht signifikant. Nun können wir weitere Tests 
   
 ##### $\chi^2$-Unabhängigkeitstest
 
-Nachdem wir herausinden möchten, ob eine abhängigkeit zwischen der Zufridenheit mit der Wu und Fremdenfeindlichkeit besteht, werden wir einen $\chi^2$-Unabhängigkeitstest durchführen.
+Nachdem wir herausfinden möchten, ob eine Abhängigkeit zwischen der Zufriedenheit mit der WU und Fremdenfeindlichkeit besteht, werden wir einen $\chi^2$-Unabhängigkeitstest durchführen.
   
-```{r Chisq.test: aggresiv - wu}
+```{r Chisq.test: aggressiv - wu}
 chisq.test(av_r.scores$aggressiv,fragebogen$wu)
 ```
   
-Die Nullhypothese kann nicht verworfen werden. P-Wert ist 0.7784 und grsser als 0.05. Die Fremdenfeindlichkeit hängt nicht von der Zufriedenheit der Studierenden mit dem multikulturellen Umfeld auf der WU ab.
+Die Nullhypothese wird beibehalten (p = 0.7784). Die Fremdenfeindlichkeit hängt nicht von der Zufriedenheit der Studierenden mit dem multikulturellen Umfeld auf der WU ab.
 
 ## Hypothese 5
 
 ### Problemanalyse
 In diesem Abschnitt wollen wir überprüfen, ob die Einstellung der Studierenden gegenüber AusländerInnen abhängig vom Kontakt zu ausländischen Personen ist.
 
-Unsere Hypothese dazu latüt:
+Unsere Hypothese dazu lautet:
 *Je mehr Kontakt Studenten zu ausländischen Mitbürgern haben, desto besser sind die Einstellungen Ausländern gegenüber.*
 
 #### Welche Variablen kommen vor?
 Erklärende Variable: Kontakt zu Ausländern
   
   - Likertskala mit 5 Items;
-
   - Ordinalskala mit einem Item;
 
    
@@ -861,15 +858,15 @@ t-Test; Unabhängigkeitstest
 
 #### Welche Hypothesen können formuliert werden?
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| H0        | Die eigene Einstellung zu MigratenInnen ist unabhängig von Kontakt zu ausländischen Personen.             |
+| H~0~     | Die eigene Einstellung zu MigratenInnen ist unabhängig von Kontakt zu ausländischen Personen.             |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| HA        | Die eigene Einstellung zu MigratenInnen ist abhängig von Kontakt zu ausländischen Personen.                  |
+| H~A~    | Die eigene Einstellung zu MigratenInnen ist abhängig von Kontakt zu ausländischen Personen.                  |
 +-----------+------------------------------------------------------------------------------------------------------------------+
   
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| H0        | Die eigene Einstellung zu MigratenInnen ist unabhängig von der Anzahl ausländischer Freunde.             |
+| H~0~    | Die eigene Einstellung zu MigratenInnen ist unabhängig von der Anzahl ausländischer Freunde.             |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| HA        | Die eigene Einstellung zu MigratenInnen ist abhängig von der Anzahl ausländischer Freunde.                  |
+| H~A~    | Die eigene Einstellung zu MigratenInnen ist abhängig von der Anzahl ausländischer Freunde.                  |
 +-----------+------------------------------------------------------------------------------------------------------------------+
 
   
@@ -912,7 +909,7 @@ box(which="figure", lty="solid", col="black")
 \bigskip
 \end{center}
   
-Aus dem Balkendiagramm können wir erkennen, dass knapp 6% der Befragen nur 0-1 ausländische Freunde haben. Alleine, dass die Meisten mehr als zwei ausländische Freunde haben, ist es ein zeichen für einen multikulturellen Umfeld auf der Wu-Wien. Hinzu kommt noch, dass über 40% der Befragten mehr als 10 angekreuzt haben.        
+Aus dem Balkendiagramm können wir erkennen, dass knapp 6% der Befragen nur 0-1 ausländische Freunde haben. Alleine, dass die Meisten mehr als zwei ausländische Freunde haben, ist es ein zeichen für einen multikulturellen Umfeld auf der WU-Wien. Hinzu kommt noch, dass über 40% der Befragten mehr als 10 angekreuzt haben.        
 
 ### Kurzbericht
 
@@ -1039,69 +1036,98 @@ kontakt.scores$kreis
 
 ## Hypothese 6
 
-"Männer sind fremdenfeindlicher als Frauen."
-Gibt es Unterschiede bei Fremdenfeindlichkeit zwischen Frauen und Männern?
+Das öffentliche Bild von "Fremdenfeinden" ist eher männlich durch beispielsweise fremdenfeindliche Gewalttaten, oder Aufmärsche im rechten Milieu geprägt. Daher ist es interessant zu untersuchen ob es geschlechtsabhängige Tendenzen bei Fremdenfeindlichkeit gibt. 
 
-### Welche Variablen kommen vor?
-  av_r.scores$moderat, Fremdenfeindlichkeit moderat, metrisch
-  av_r.scores$aggressiv, Fremdenfeindlichkeit stark, metrisch
-  sex, Geschlecht, kategorial
-  
-  Erklärende Variable: sex
-  Responsevariable: Fremdenfeindlichkeit
+*Gibt es Unterschiede bei der Fremdenfeindlichkeit zwischen Frauen und Männern?*
 
-### Welche Methode ist angebracht?
+
+### Problemanalyse
+#### Welche Variablen kommen vor?
+    
+Erklärende Variable: sex, Geschlecht (kategorial)
+Responsevariable(n): Fremdenfeindlichkeit
+
+  - av_r.scores$moderat, Fremdenfeindlichkeit moderat (metrisch)
+  - av_r.scores$aggressiv, Fremdenfeindlichkeit stark (metrisch)
+
+
+#### Welche Methode ist angebracht?
 t-Test oder Mann-Whitney U-Test
 
-### Welche Hypothesen können formuliert werden?
+#### Welche Hypothesen können formuliert werden?
 
-+-----------+--------------------------------------------------------------------+
-| H~0~:     | Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich         |
-+-----------+--------------------------------------------------------------------+
-| H~A~:     | Die Fremdenfeindlichkeit unterscheidet sich bei Männern und Frauen |
-+-----------+--------------------------------------------------------------------+
++-----------+------------------------------------------------------------------------------+
+| H~0~:     | Die moderate Fremdenfeindlichkeit ist bei Männern und Frauen gleich          |
++-----------+------------------------------------------------------------------------------+
+| H~A~:     | Die moderate Fremdenfeindlichkeit unterscheidet sich bei Männern und Frauen  |
++-----------+------------------------------------------------------------------------------+
+
++-----------+------------------------------------------------------------------------------+
+| H~0~:     | Die agressive Fremdenfeindlichkeit ist bei Männern und Frauen gleich         |
++-----------+------------------------------------------------------------------------------+
+| H~A~:     | Die agressive Fremdenfeindlichkeit unterscheidet sich bei Männern und Frauen |
++-----------+------------------------------------------------------------------------------+
 
 ### Kurzbericht
 
 
-```{r boxplot 1}
-#abhängige ~ unabhängige
-boxplot(av_r.scores$moderat ~ fragebogen$sex)
-```
-
-```{r boxplot 2}
-boxplot(av_r.scores$aggressiv ~ fragebogen$sex)
-```
-
-
-```{r densbox moderat}
+```{r plots moderat}
+boxplot(av_r.scores$moderat ~ fragebogen$sex, names=c("weiblich", "männlich"))
+box(which="figure", lty="solid", col="black")
 densbox(av_r.scores$moderat ~ fragebogen$sex)
-# densbox moderat
 ```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)` + `r I(c_plots <- c_plots + 1)`: Moderate Fremdenfeindlichkeit nach Geschlecht}
+\bigskip
+\end{center}
 
-```{r densbox aggressiv}
-densbox(av_r.scores$aggressiv ~ fragebogen$sex)
-# densbox aggressiv
-```
-
-
-```{r bartlett test}
+```{r bartlett moderat}
 bartlett.test(av_r.scores$moderat~fragebogen$sex)
 ```
 
-Bartlett-Test -> nicht signifikant (p-value = 0.8992) -> t-Test
+Generell kann man sagen, dass Frauen niedrigere Werte für moderate Fremdenfeindlichkeit aufweisen (negative Werte bedeuten eine höhere Fremdenfeindlichkeit). Die Spannweite ist bei Männern größer. Die Minima sind bei beiden gleich, das Maximum bei Männern höher. Die Streuung ist bei beiden gleich (p = 0.8992). 
+
+```{r plots agressiv}
+boxplot(av_r.scores$aggressiv ~ fragebogen$sex, names=c("weiblich", "männlich"))
+box(which="figure", lty="solid", col="black")
+densbox(av_r.scores$aggressiv ~ fragebogen$sex)
+```
+\begin{center}
+\textit{Abbildung `r I(c_plots <- c_plots + 1)`: Agressive Fremdenfeindlichkeit nach Geschlecht}
+\bigskip
+\end{center}
 
 
-```{r t-test}
+```{r bartlett agressiv}
+bartlett.test(av_r.scores$aggressiv~fragebogen$sex)
+```
+
+Am Boxplot sieht man dass die Verteilungen Ausreißer haben. Die Spannweite ist diesmal bei den Frauen größer. Die Streuung ist bei den Frauen geringer aber nicht signifikant (p = 0.8176). 
+
+
+```{r t-test moderat}
 t.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRUE)
 ```
 
-```{r wilcox-test}
+```{r wilcox-test moderat}
 wilcox.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRUE)
 ```
 
 
-Nullhypothese kann nicht verworfen werden (p-value = 0.7747, größer als .05), die Fremdenfeindlichkeit ist daher bei Männern und Frauen gleich. 
+Bei der moderaten Fremdenfeindlichkeit wird die Nullhypothese wird beibehalten, es gibt daher bei Fremdenfeindlichkeit bei Männern und Frauen keine Unterschiede (t-Test p = 0.7747; Wilcox-Test p = 0.9356).  
+
+
+```{r t-test agressiv}
+t.test(av_r.scores$aggressiv~fragebogen$sex, var.equal=TRUE)
+```
+
+```{r wilcox-test agressiv}
+wilcox.test(av_r.scores$aggressiv~fragebogen$sex, var.equal=TRUE)
+```
+
+
+Auch bei der starken Fremdenfeindlichkeit wird die Nullhypothese beibehalten, es gibt daher auch hier zwischen Männern und Frauen keine Unterschiede (t-Test p = 0.4953; Wilcox-Test p = 0.2037).  
+
 
 \clearpage
 \section{Anhang}
