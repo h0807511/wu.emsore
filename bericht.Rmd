@@ -2,10 +2,10 @@
 output: 
   pdf_document:
     citation_package: natbib
-    #keep_tex: trü
-    #fig_caption: trü
-    number_sections: trü
-    #toc: trü
+    #keep_tex: TRUE
+    #fig_caption: TRUE
+    number_sections: TRUE
+    #toc: TRUE
     latex_engine: pdflatex
     #template: latex_template.tex
 title: "Zur Wahrnehmung und Einstellung von WU-Studierenden gegenüber Fremden"
@@ -18,7 +18,7 @@ endnote: no
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE)
-# knitr::opts_chunk$set(cache=TRü)
+# knitr::opts_chunk$set(cache=TRUE)
 # Counter für Abbildungen und Tabellen
 c_tables <- 0
 c_plots <- 0
@@ -225,7 +225,7 @@ Im demographischen Teil zum Schluss des Fragebogens wurde auf Fragen zu persönl
 ```{r barplot Geschlecht}
 sex_count <- table(fragebogen$sex)
 rownames(sex_count) <- c("männlich", "weiblich")
-barplot(sex_count, main="Geschlecht", ylim=c(0,70), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("lightblü", "mistyrose"))
+barplot(sex_count, main="Geschlecht", ylim=c(0,70), xlab="Frage: 'Ihr Geschlecht?'", ylab="Anzahl", col=c("lightblue", "mistyrose"))
 box(which="figure", lty="solid", col="black")
 ```
 
@@ -312,7 +312,7 @@ Die Teststatistik zeigt ein klares Ergebnis, da die Teststatistik einen p-Wert u
 ```{r Hauptkomponentenanalyse: KMO Kriterium}
 kmosmd <- KMOS(av)
 print(kmosmd, stats="KMO")
-print(kmosmd, stats="MSA", sort=TRü, digits=3, show=1:5)
+print(kmosmd, stats="MSA", sort=TRUE, digits=3, show=1:5)
 ```
 
 Der Wert des KMO liegt bei 0.8155905 und die MSA-Werte liegen bei > als 0,7. Die Daten sind also als sehr gut geeignet einzustufen weil genügend Informationen zur Durchführung einer Hauptkomponentenanalyse vorliegen. 
@@ -336,7 +336,7 @@ Komponente PC1 erklärt 53% der Varianz und Komponente PC2 14%. Beide Komponente
 ```{r Hauptkomponentenanalyse }
 pca.av_r <- principal(av, 2)
 pca.av_r$criteria <- NULL
-print(pca.av_r, cut=0.43, sort=TRü, digits=3)
+print(pca.av_r, cut=0.43, sort=TRUE, digits=3)
 ```
 
 Es werden 2 Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die Komponenten mit den hoch ($\ge 0.43$) auf ihnen ladenden Variablen sind:
@@ -505,7 +505,7 @@ Als nüchstes werden wir die MSAs und die KMO überprüfen.
 ```{r Umfeld: KMO Kriterium}
 kmosmd <- KMOS(umfeld)
 print(kmosmd, stats="KMO")
-print(kmosmd, stats="MSA", sort=TRü, digits=3, show=1:5)
+print(kmosmd, stats="MSA", sort=TRUE, digits=3, show=1:5)
 ```
 
 Der Wert des KMO liegt bei 0.8040357 und die MSA-Werte liegen bei > als 0,6. Die Daten sind also als sehr gut geeignet einzustufen weil genügend Informationen zur Durchführung einer Hauptkomponentenanalyse vorliegen. 
@@ -543,7 +543,7 @@ Es werden zwei Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert.
 ```{r Hauptkomponentenanalyse - Umfeld }
 pca.umfeld_r <- principal(umfeld, 2)
 pca.umfeld_r$criteria <- NULL
-print(pca.umfeld_r, cut=0.48, sort=TRü, digits=3)
+print(pca.umfeld_r, cut=0.48, sort=TRUE, digits=3)
 ```
 
 Es werden zwei Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die Komponenten mit den hoch ($\ge 0.48$) auf ihnen ladenden Variablen sind:
@@ -965,7 +965,7 @@ Als nüchstes werden wir die MSAs und die KMO überprüfen.
 ```{r Kontakt: KMO Kriterium}
 kmosmd <- KMOS(kontakt)
 print(kmosmd, stats="KMO")
-print(kmosmd, stats="MSA", sort=TRü, digits=3, show=1:5)
+print(kmosmd, stats="MSA", sort=TRUE, digits=3, show=1:5)
 ```
 
 Der Wert des KMO liegt bei 0.8040357 und die MSA-Werte liegen bei > als 0,6. Die Daten sind also als sehr gut geeignet einzustufen weil genügend Informationen zur Durchführung einer Hauptkomponentenanalyse vorliegen. 
@@ -1088,7 +1088,7 @@ Bartlett-Test -> nicht signifikant (p-valü = 0.8992) -> t-Test
 
 
 ```{r t-test}
-t.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRü)
+t.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRUE)
 ```
 
 
@@ -1118,7 +1118,7 @@ kable(fragebogen[1:5,37:44])
 
 ```{r übersicht NA: Liste}
 na_count <- sapply(fragebogen[-1,], function(y) sum(is.na(y)))
-kable(na_count, format="latex", digits=2, longtable=TRü)
+kable(na_count, format="latex", digits=2, longtable=TRUE)
 ```
 
 \begin{center}
@@ -1129,7 +1129,6 @@ kable(na_count, format="latex", digits=2, longtable=TRü)
 
 ```{r übersicht NA: Sum}
 # Summe aller NA im Datensatz
-sum(is.na(fragebogen))
 ```
 \section{Referenzen}
 \appendix
