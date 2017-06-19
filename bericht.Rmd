@@ -67,7 +67,7 @@ Der Fragebogen ist im Anhang zufinden
 \section{Fremdenfeindlichkeit als Thema}
 
 ## Warum das Thema Fremdenfeindlichkeit?
-Fremdenfeindlichkeit und Migration ist besonders in den letzen beiden Jahren ein heiss diskutiertes Thema geworden. Die Gründe für Fremdenfeindlichkeit mögen auf den ersten Blick durch Zuwanderung und die damit einhergehende änderung demographischer Verhältnisse verursacht worden sein, eine grosse Rolle spielt jedoch die Wahrnehmung von Fremden und die damit einhergehenden Gefühlslagen der Menschen. Diese Entwicklung macht es notwendig zu verstehen welche Faktoren für die Entstehung, Verbreitung und Verfestigung von Fremdenfeindlichkeit verantwortlich sind, denn Ausländer (auch Deutsche, Schweizer, ..) haben häufig mit Diskriminierung zu kämpfen. In demokratischen Staaten kann jedoch nur die Gleichberechtigung aller das Ziel sein und daher ist es notwendig, Mittel und Wege zu erforschen um ein besser integriertes Zusammenleben zu ermöglichen. 
+Fremdenfeindlichkeit und Migration ist besonders in den letzen beiden Jahren ein heiss diskutiertes Thema geworden. Die Gründe für Fremdenfeindlichkeit mögen auf den ersten Blick durch Zuwanderung und die damit einhergehende Änderung demographischer Verhältnisse verursacht worden sein, eine grosse Rolle spielt jedoch die Wahrnehmung von Fremden und die damit einhergehenden Gefühlslagen der Menschen. Diese Entwicklung macht es notwendig zu verstehen welche Faktoren für die Entstehung, Verbreitung und Verfestigung von Fremdenfeindlichkeit verantwortlich sind, denn Ausländer (auch Deutsche, Schweizer, ..) haben häufig mit Diskriminierung zu kämpfen. In demokratischen Staaten kann jedoch nur die Gleichberechtigung aller das Ziel sein und daher ist es notwendig, Mittel und Wege zu erforschen um ein besser integriertes Zusammenleben zu ermöglichen. 
 
 Mit dem Thema der Wahrnehmung von Fremden die Ursachen für die Entstehung von Stereotypen haben sich unzählige Arbeiten beschäftigt. Die Entstehung von ängsten  gegenüber Fremden wird von Stolz (2000) folgendermassen kategorisiert: 
 
@@ -114,11 +114,11 @@ Auch das Bildungsniveau spielt eine Rolle bei der Entstehung von Fremdenfeindlic
 |       | steht, desto besser sind die Einstellungen Aus-    |                    |
 |       | länderInnen gegenüber.                             |                    |
 +-------+----------------------------------------------------+--------------------+
-| 6     | Männer sind fremdenfeindlicher als Fraün.         |                    |
+| 6     | Männer sind fremdenfeindlicher als Frauen.         |                    |
 +-------+----------------------------------------------------+--------------------+
 
 \begin{center}
-\textit{Tabelle `r I(c_tables <- c_tables + 1)`: übersicht der Hypothesen}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Übersicht der Hypothesen}
 \bigskip
 \end{center}
 
@@ -139,9 +139,9 @@ Die Bereitschaft den Fragebogen auszufüllen war generell hoch, besonders als da
 * Nachfragen zum Verständnis (v.a. bei der Definition von AusländerInnen, Begleittext Frage 4)
 * in 5 Fällen wurden bereits angekreuzte Items wieder ausgebessert (Beispiel: FB Nr. 95/F5, F6)
 
-Der Fragebogen wurde durchgehend und ohne änderung bei allen Personen ausgegeben. Die Ausnahme bildet der Rechtschreibfehler der zu einer einmaligen Korrektur des Fragebogens führte (ab Nr. 75 FB). 
+Der Fragebogen wurde durchgehend und ohne Änderung bei allen Personen ausgegeben. Die Ausnahme bildet der Rechtschreibfehler der zu einer einmaligen Korrektur des Fragebogens führte (ab Nr. 75 FB). 
 
-Im Vorfeld wurde ein einmaliger Pretest mit 3 Personen durchgeführt um Feedback zur Qualität des Fragebogens zu erhalten. Der Test hat zu Anpassungen und Präzisierungen bei der Fragenformulierung geführt. Das grundlegende Design wurde positiv aufgenommen. Alle Testpersonen sind in keinem persönlichen Naheverhältnis züinander oder mit den Durchführenden gestanden.
+Im Vorfeld wurde ein einmaliger Pretest mit 3 Personen durchgeführt um Feedback zur Qualität des Fragebogens zu erhalten. Der Test hat zu Anpassungen und Präzisierungen bei der Fragenformulierung geführt. Das grundlegende Design wurde positiv aufgenommen. Alle Testpersonen sind in keinem persönlichen Naheverhältnis zueinander oder mit den Durchführenden gestanden.
 
 
 ## Fragebogen
@@ -162,11 +162,11 @@ Beschreibung der Kodierung
 
 ## Datenkontrolle 
 
-Da es in der Praxis oft vorkommt dass beim Ausfüllen des Fragebogens nicht alle Fragen beantwortet wurden oder Fehler bei der übertragung passieren, wird eine Datenkontrolle durchgeführt um ungewöhnliche Fälle aufzuspüren und 'missing valüs' (NAs) festzustellen. Einen Auszug des gesamten Datensatzes ist im Anhang zu finden. 
+Da es in der Praxis oft vorkommt dass beim Ausfüllen des Fragebogens nicht alle Fragen beantwortet wurden oder Fehler bei der Übertragung passieren, wird eine Datenkontrolle durchgeführt um ungewöhnliche Fälle aufzuspüren und 'missing values' (NAs) festzustellen. Einen Auszug des gesamten Datensatzes ist im Anhang zu finden. 
 
-### Missing valüs
+### Missing values
 
-Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Fragebogen im Anhang Frage 3, Item 12 "Eine Andere [bitte eintragen]" der Frage "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individülles Medium schriftlich anzugeben. Im Ergebnis gibt es:
+Die Prüfung des Datensatz ergibt eine auffällige Häufung von NA bei der Variable "andere" (siehe Fragebogen im Anhang Frage 3, Item 12 "Eine Andere [bitte eintragen]" der Frage "Wie häufig liest du folgende Medien?"). Die Antwortmöglichkeit wurde als 4-stufige Intervallskala angeboten mit der Möglichkeit ein individelles Medium schriftlich anzugeben. Im Ergebnis gibt es:
 
 * 18 NA für Antworten die keine Angabe zum Medium haben in Kombination mit keiner Auswahl auf der Skala  
 * nur 5 Ergebnisse mit schriftlichen Angaben (Beispiel: FAZ, Handelsblatt (FB Nr. 89), Economist (FB Nr. 90)) kombiniert mit einer Auswahl auf der Skala.
@@ -207,7 +207,7 @@ fragebogen <- fragebogen[-c(47, 65), ]
 nrow(fragebogen)
 ```
 
-Eine übersicht weiterer NA ist im Anhang zu sehen.
+Eine Übersicht weiterer NA ist im Anhang zu sehen.
 
 ### Ausreisser
 
@@ -239,9 +239,9 @@ box(which="figure", lty="solid", col="black")
 In Abbildung `r c_plots` ist die Verteilung der Befragten nach ihrem Geschlecht dargestellt. Dabei ist zu erkennen, dass sich unter den Befragten Personen `r sex_count[1]` männliche Studierende und `r sex_count[2]` weibliche Studierende befinden. Dies deutet auf ein Ungleichgewicht hin. Ob die Stichprobe dennoch repräsentativ ist, kann festgestellt werden, wenn wir die Verteilung dieser Stichprobe mit der Verteilung der Grundgesamtheit vergleichen. Die Statistik Austria gibt an, das im Studienjahr 2015/16 insgesamt 21.157 Personen an der WU studiert haben.13 11.137 davon sind männliche und 10.020 sind weibliche Studieren- de. Wenn wir davon ausgehen, dass sich dieses Verhältnis im Studienjahr 2016/17 nicht verändert hat, ergibt dies eine Verteilung von etwa 52% männlichen und 48% weiblichen Studierenden. Mit einem Chi-Quadrat Test können wir feststellen, ob sich unsere Stichprobe von der erwarteten Verteilung der Grundgesamtheit unterscheidet. Die beobachteten und erwarteten Werte der Verteilung der Geschlechter sehen wir in Tabelle 4.1. Für den Chi-Quadrat Test werden folgende Hypothesen aufgestellt:
 
 +-----------+-------------------------------------------------------------------------------------------+
-| H 0 :     | Die Verteilung der Geschlechter unterscheidet sich nicht von der erwarteten Verteilung  |
+| H~0~:     | Die Verteilung der Geschlechter unterscheidet sich nicht von der erwarteten Verteilung  |
 +-----------+-------------------------------------------------------------------------------------------+
-| H A :     | Die Verteilung der Geschlechter unterscheidet sich von der erwarteten Verteilung          |
+| H~A~:     | Die Verteilung der Geschlechter unterscheidet sich von der erwarteten Verteilung          |
 +-----------+-------------------------------------------------------------------------------------------+
 
 
@@ -262,21 +262,21 @@ Allen Hypothesen liegt die gleiche abhängige Variable (AV) zugrunde und lautet:
 +===========+==================================================================================================================+
 | heimat    | Wenn Arbeitsplätze knapp werden, sollte man AusländerInnen wieder in Ihre Heimat schicken                        |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| rechte    | AusländerInnen sollten nicht die gleichen Rechte in allen Lebensbereichen haben wie österreicherInnen            |
+| rechte    | AusländerInnen sollten nicht die gleichen Rechte in allen Lebensbereichen haben wie ÖsterreicherInnen            |
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | kultur    | Ich bin nicht für die Anwesenheit von AusländerInnen weil sie unsere Kultur negativ beeinflussen                  |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| verlassen | Es wäre am besten, wenn alle AusländerInnen österreich verlassen würden                                          |
+| verlassen | Es wäre am besten, wenn alle AusländerInnen Österreich verlassen würden                                          |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| partner   | In österreich lebende AusländerInnen sollen sich Ihre (Ehe-)partner unter ihren eigenen Landsleuten wählen       |
+| partner   | In Österreich lebende AusländerInnen sollen sich Ihre (Ehe-)partner unter ihren eigenen Landsleuten wählen       |
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | knapp     | Wenn Studierendenplätze an der WU noch knapper werden, sollte man bei der Zulassung InländerInnen bevorzugen     |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| pflegen   | AusländerInnen sollen ihre Kultur nicht bei uns pflegen, sie sollen sich an die Kultur in österreich anpassen    |
+| pflegen   | AusländerInnen sollen ihre Kultur nicht bei uns pflegen, sie sollen sich an die Kultur in Österreich anpassen    |
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | politik   | Politiker sollen sich vor allem für InländerInnen einsetzen                                                      |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| verdienen | AusländerInnen sollen sich nach dem Zuzug erstmal die Privilegien des Sozialstaates in österreich (...)verdienen |
+| verdienen | AusländerInnen sollen sich nach dem Zuzug erstmal die Privilegien des Sozialstaates in Österreich (...)verdienen |
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | egal      | Wenn ich mit AusländerInnen in einer Arbeitsgruppe bin, ist mir das nicht egal                                   |
 +-----------+------------------------------------------------------------------------------------------------------------------+
@@ -344,14 +344,14 @@ Es werden 2 Hauptkomponenten extrahiert und nach der Varimaxmethode rotiert. Die
 
 1. Komponente (RC1): moderate Einstellung (Eigenwert: 3.092, erklärte Varianz: 34,4%)
   "Bevorzugung von Inländern bei Knappheit von Studienplätzen"  .769
-  "Anpassung an Kultur in österreich" .844
+  "Anpassung an Kultur in Österreich" .844
   "Einsatz Politiker für Inländer"  .829
   "Verdienst Privilegien Sozialstaat" .765
 2. Komponente (RC2): aggressive Einstellung (Eigenwert: 2.972, erklärte Varianz: 32,5%)
   "Wieder in die Heimat schicken" .769
-  "Nicht die gleichen Rechte wie österreicher"  .662
+  "Nicht die gleichen Rechte wie Österreicher"  .662
   "Negative Beeinflussung Kultur" .794
-  "österreich verlassen"  .901
+  "Österreich verlassen"  .901
   "Ehepartner unter eigenen Landsleuten"  .431
 
 
@@ -365,7 +365,7 @@ box(which="figure", lty="solid", col="black")
 ```{r barplot var rechte }
 countr <- table(fragebogen$rechte)
 rownames(countr) <- c("1", "2", "3", "4", "5", "6")
-barplot(countr, main="Variable 'rechte'", ylim=c(0,60), xlab="Item: AusländerInnen sollten nicht die gleichen Rechte \n in allen Lebensbereichen haben wie österreicherInnen", ylab="Anzahl")
+barplot(countr, main="Variable 'rechte'", ylim=c(0,60), xlab="Item: AusländerInnen sollten nicht die gleichen Rechte \n in allen Lebensbereichen haben wie ÖsterreicherInnen", ylab="Anzahl")
 box(which="figure", lty="solid", col="black")
 ```
 
@@ -1041,8 +1041,8 @@ kontakt.scores$kreis
   
 ## Hypothese 6
 
-"Männer sind fremdenfeindlicher als Fraün."
-Gibt es Unterschiede bei Fremdenfeindlichkeit zwischen Fraün und Männern?
+"Männer sind fremdenfeindlicher als Frauen."
+Gibt es Unterschiede bei Fremdenfeindlichkeit zwischen Frauen und Männern?
 
 ### Welche Variablen kommen vor?
   av_r.scores$moderat, Fremdenfeindlichkeit moderat, metrisch
@@ -1058,9 +1058,9 @@ t-Test oder Mann-Whitney U-Test
 ### Welche Hypothesen können formuliert werden?
 
 +-----------+--------------------------------------------------------------------+
-| H0:     | Die Fremdenfeindlichkeit ist bei Männern und Fraün gleich         |
+| H0:     | Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich         |
 +-----------+--------------------------------------------------------------------+
-| HA:     | Die Fremdenfeindlichkeit unterscheidet sich bei Männern und Fraün |
+| HA:     | Die Fremdenfeindlichkeit unterscheidet sich bei Männern und Frauen |
 +-----------+--------------------------------------------------------------------+
 
 ### Kurzbericht
@@ -1092,12 +1092,12 @@ t.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRUE)
 ```
 
 
-Nullhypothese kann nicht verworfen werden (p-valü = 0.7747, grösser als .05) -> Die Fremdenfeindlichkeit ist bei Männern und Fraün gleich. 
+Nullhypothese kann nicht verworfen werden (p-valü = 0.7747, grösser als .05) -> Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich. 
 
 \clearpage
 \section{Anhang}
 
-## übersicht Datensatz
+## Übersicht Datensatz
 
 Ausgabe der ersten 5 Zeilen: 
 
@@ -1114,20 +1114,20 @@ kable(fragebogen[1:5,37:44])
 \bigskip
 \end{center}
 
-## übersicht NA
+## Übersicht NA
 
-```{r übersicht NA: Liste}
+```{r Übersicht NA: Liste}
 na_count <- sapply(fragebogen[-1,], function(y) sum(is.na(y)))
 kable(na_count, format="latex", digits=2, longtable=TRUE)
 ```
 
 \begin{center}
-\textit{Tabelle `r I(c_tables <- c_tables + 1)`: übersicht der NA im Datensatz}
+\textit{Tabelle `r I(c_tables <- c_tables + 1)`: Übersicht der NA im Datensatz}
 \bigskip
 \end{center}
 
 
-```{r übersicht NA: Sum}
+```{r Übersicht NA: Sum}
 # Summe aller NA im Datensatz
 ```
 \section{Referenzen}
