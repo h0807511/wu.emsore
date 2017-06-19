@@ -17,7 +17,7 @@ endnote: no
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=FALSE)
+knitr::opts_chunk$set(echo=TRUE)
 # knitr::opts_chunk$set(cache=TRUE)
 # Counter für Abbildungen und Tabellen
 c_tables <- 0
@@ -324,7 +324,7 @@ box(which="figure", lty="solid", col="black")
 
 Der Screeplot zeigt, dass die ersten 2 Komponenten einen Eigenwert > 1 haben, die anderen liegen unter diesem Kriterium. 
 
-Komponenten ergeben sich aus der Gruppierung von miteinander korrelierter Variablen wobei die Komponenten selbst miteinander nicht korrelieren. Die Gründe des einzelnen Eigenwertes beschreibt den Anteil der Varianz in den Daten, die durch diese Komponente erklärt wird. Der Eigenwert wird durch die Anzahl der Items die zu einer Komponente zusammengefasst werden und der Korrelation innerhalb dieser Gruppe bestimmt. Je grösser der Eigenwert desto mehr trägt er zur Erklärung der Gesamtstreuung bei. Komponenten mit einem Wert von 1 liefern den gleichen Erklärungswert wie die einzelne ursprüngliche Variable, darunter ist der Erklärungswert sogar geringer. 
+Komponenten ergeben sich aus der Gruppierung von miteinander korrelierter Variablen wobei die Komponenten selbst miteinander nicht korrelieren. Die Gründe des einzelnen Eigenwertes beschreibt den Anteil der Varianz in den Daten, die durch diese Komponente erklärt wird. Der Eigenwert wird durch die Anzahl der Items die zu einer Komponente zusammengefasst werden und der Korrelation innerhalb dieser Gruppe bestimmt. Je größer der Eigenwert desto mehr trägt er zur Erklärung der Gesamtstreuung bei. Komponenten mit einem Wert von 1 liefern den gleichen Erklärungswert wie die einzelne ursprüngliche Variable, darunter ist der Erklärungswert sogar geringer. 
 
 ```{r Hauptkomponentenanalyse: Varianz}
 pca.av <- principal(av, 2, rotate="none")
@@ -420,9 +420,9 @@ t-Test
 #### Welche Hypothesen können formuliert werden?
 
 +-----------+---------------------------------------------------------------------------+
-| H0:       |   Die eigene Einstellung zu MigratenInnen ist unabhängig von der Einstellung der Personen im eigenen Umfeld.               |
+| H~0~:       |   Die eigene Einstellung zu MigratenInnen ist unabhängig von der Einstellung der Personen im eigenen Umfeld.               |
 +-----------+---------------------------------------------------------------------------+
-| HA:       |   Die eigene Einstellung zu MigratenInnen ist abhängig von der Einstellung der Personen im eigenen Umfeld.                  |
+| H~A~:       |   Die eigene Einstellung zu MigratenInnen ist abhängig von der Einstellung der Personen im eigenen Umfeld.                  |
 +-----------+---------------------------------------------------------------------------+
 
 #### Die unabhängige Variable - Umfeld
@@ -1035,10 +1035,8 @@ round(head(kontakt.scores), 4)
 kontakt.scores$kreis
 ```
 
-#### überprüfung der Hypothesen
+#### Überprüfung der Hypothesen
 
-  
-  
 ## Hypothese 6
 
 "Männer sind fremdenfeindlicher als Frauen."
@@ -1075,8 +1073,14 @@ boxplot(av_r.scores$aggressiv ~ fragebogen$sex)
 ```
 
 
-```{r densbox}
+```{r densbox moderat}
 densbox(av_r.scores$moderat ~ fragebogen$sex)
+# densbox moderat
+```
+
+```{r densbox aggressiv}
+densbox(av_r.scores$aggressiv ~ fragebogen$sex)
+# densbox aggressiv
 ```
 
 
@@ -1084,7 +1088,7 @@ densbox(av_r.scores$moderat ~ fragebogen$sex)
 bartlett.test(av_r.scores$moderat~fragebogen$sex)
 ```
 
-Bartlett-Test -> nicht signifikant (p-valü = 0.8992) -> t-Test
+Bartlett-Test -> nicht signifikant (p-value = 0.8992) -> t-Test
 
 
 ```{r t-test}
@@ -1092,7 +1096,7 @@ t.test(av_r.scores$moderat~fragebogen$sex, var.equal=TRUE)
 ```
 
 
-Nullhypothese kann nicht verworfen werden (p-valü = 0.7747, grösser als .05) -> Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich. 
+Nullhypothese kann nicht verworfen werden (p-value = 0.7747, größer als .05) -> Die Fremdenfeindlichkeit ist bei Männern und Frauen gleich. 
 
 \clearpage
 \section{Anhang}
